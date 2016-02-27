@@ -1,0 +1,28 @@
+PODS:
+  - Eureka (1.4.1)
+  - EZSwiftExtensions (1.2)
+  - Firebase (2.5.1)
+  - JSQMessagesViewController (7.2.0):
+    - JSQSystemSoundPlayer (~> 2.0.1)
+  - JSQSystemSoundPlayer (2.0.1)
+  - LNRSimpleNotifications (0.3.0)
+  - TKSwarmAlert (0.0.4)
+
+DEPENDENCIES:
+  - Eureka (~> 1.3)
+  - EZSwiftExtensions
+  - Firebase
+  - JSQMessagesViewController
+  - LNRSimpleNotifications
+  - TKSwarmAlert
+
+SPEC CHECKSUMS:
+  Eureka: 2f1921d3162491921d2fef3b516bc4ef93a05122
+  EZSwiftExtensions: bca85cfa0448c0c0213d97b02ddcf99d5f0ca1c9
+  Firebase: 3565ea88b830f28f2c77ecc524622bc71a20d085
+  JSQMessagesViewController: 73cab48aa92fc2d512f3b6724f3425cc47a19eb5
+  JSQSystemSoundPlayer: c5850e77a4363ffd374cd851154b9af93264ed8d
+  LNRSimpleNotifications: f8f99020ef6c0e4b46633d11e47c286c6f86700e
+  TKSwarmAlert: 8fe22e7b9beec7e1e5d9506483e8f7c0272767eb
+
+COCOAPODS: 0.39.0
