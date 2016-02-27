@@ -16,6 +16,8 @@
 		C34F57801C816969001B7D9F /* ChatMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = C34F577F1C816969001B7D9F /* ChatMessage.swift */; };
 		C34F57821C816D75001B7D9F /* CoreFirebaseData.swift in Sources */ = {isa = PBXBuildFile; fileRef = C34F57811C816D75001B7D9F /* CoreFirebaseData.swift */; };
 		C34F57841C8180DB001B7D9F /* HandleAuthProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = C34F57831C8180DB001B7D9F /* HandleAuthProtocol.swift */; };
+		D48703091C81ACB100E4775E /* LemonMilk.otf in Resources */ = {isa = PBXBuildFile; fileRef = D48703081C81ACB100E4775E /* LemonMilk.otf */; };
+		D487030B1C81ACBC00E4775E /* CaviarDreams.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D487030A1C81ACBC00E4775E /* CaviarDreams.ttf */; };
 		EC81FA831C81551300CDA20B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC81FA821C81551300CDA20B /* AppDelegate.swift */; };
 		EC81FA851C81551300CDA20B /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC81FA841C81551300CDA20B /* LoginViewController.swift */; };
 		EC81FA871C81551300CDA20B /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC81FA861C81551300CDA20B /* ChatViewController.swift */; };
@@ -53,6 +55,9 @@
 		C34F577F1C816969001B7D9F /* ChatMessage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatMessage.swift; sourceTree = "<group>"; };
 		C34F57811C816D75001B7D9F /* CoreFirebaseData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreFirebaseData.swift; sourceTree = "<group>"; };
 		C34F57831C8180DB001B7D9F /* HandleAuthProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HandleAuthProtocol.swift; sourceTree = "<group>"; };
+		D48703081C81ACB100E4775E /* LemonMilk.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = LemonMilk.otf; sourceTree = "<group>"; };
+		D487030A1C81ACBC00E4775E /* CaviarDreams.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = CaviarDreams.ttf; sourceTree = "<group>"; };
+		D487030C1C81ACC500E4775E /* CaviarDreams_Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = CaviarDreams_Bold.ttf; sourceTree = "<group>"; };
 		EC81FA7F1C81551300CDA20B /* ChatPedia.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ChatPedia.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EC81FA821C81551300CDA20B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EC81FA841C81551300CDA20B /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -108,9 +113,20 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		D48703071C81AC9B00E4775E /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				D487030C1C81ACC500E4775E /* CaviarDreams_Bold.ttf */,
+				D487030A1C81ACBC00E4775E /* CaviarDreams.ttf */,
+				D48703081C81ACB100E4775E /* LemonMilk.otf */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
 		EC81FA761C81551300CDA20B = {
 			isa = PBXGroup;
 			children = (
+				D48703071C81AC9B00E4775E /* Resources */,
 				EC81FA811C81551300CDA20B /* ChatPedia */,
 				EC81FA981C81551300CDA20B /* ChatPediaTests */,
 				EC81FA801C81551300CDA20B /* Products */,
@@ -293,6 +309,8 @@
 			files = (
 				EC81FA8F1C81551300CDA20B /* LaunchScreen.storyboard in Resources */,
 				EC81FA8C1C81551300CDA20B /* Assets.xcassets in Resources */,
+				D48703091C81ACB100E4775E /* LemonMilk.otf in Resources */,
+				D487030B1C81ACBC00E4775E /* CaviarDreams.ttf in Resources */,
 				EC81FA8A1C81551300CDA20B /* Main.storyboard in Resources */,
 				EC81FAB91C81A3C500CDA20B /* DealLocations in Resources */,
 				C34F577A1C8161BA001B7D9F /* Utilities.storyboard in Resources */,

@@ -65,7 +65,7 @@ class MainTableViewController: UITableViewController {
     
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         
-        let cell = tableView.cellForRowAtIndexPath(indexPath) as! FoldingCell
+        _ = tableView.cellForRowAtIndexPath(indexPath) as! FoldingCell
 
         
     }
