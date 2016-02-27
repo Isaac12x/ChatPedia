@@ -11,7 +11,7 @@ PODS:
 DEPENDENCIES:
   - Eureka (~> 1.3)
   - EZSwiftExtensions
-  - Firebase
+  - Firebase (>= 2.5.0)
   - JSQMessagesViewController
   - LNRSimpleNotifications
   - TKSwarmAlert
