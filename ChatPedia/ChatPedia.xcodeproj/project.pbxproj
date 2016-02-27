@@ -28,6 +28,7 @@
 		EC81FAB71C8198AE00CDA20B /* Cell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC81FAB41C8198AE00CDA20B /* Cell.swift */; };
 		EC81FAB91C81A3C500CDA20B /* DealLocations in Resources */ = {isa = PBXBuildFile; fileRef = EC81FAB81C81A3C500CDA20B /* DealLocations */; };
 		EC81FABE1C81A57300CDA20B /* DealsTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC81FABD1C81A57300CDA20B /* DealsTableView.swift */; };
+		EC81FAC21C81A6D600CDA20B /* DealsCellImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC81FAC11C81A6D600CDA20B /* DealsCellImpl.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -68,6 +69,7 @@
 		EC81FAB41C8198AE00CDA20B /* Cell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Cell.swift; sourceTree = "<group>"; };
 		EC81FAB81C81A3C500CDA20B /* DealLocations */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = DealLocations; sourceTree = "<group>"; };
 		EC81FABD1C81A57300CDA20B /* DealsTableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DealsTableView.swift; sourceTree = "<group>"; };
+		EC81FAC11C81A6D600CDA20B /* DealsCellImpl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DealsCellImpl.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -173,7 +175,6 @@
 			isa = PBXGroup;
 			children = (
 				EC81FAB21C8198AE00CDA20B /* BaseCell.swift */,
-				EC81FABD1C81A57300CDA20B /* DealsTableView.swift */,
 				EC81FAB31C8198AE00CDA20B /* TableViewBase.swift */,
 				EC81FAB41C8198AE00CDA20B /* Cell.swift */,
 			);
@@ -184,6 +185,8 @@
 			isa = PBXGroup;
 			children = (
 				EC81FAB81C81A3C500CDA20B /* DealLocations */,
+				EC81FABD1C81A57300CDA20B /* DealsTableView.swift */,
+				EC81FAC11C81A6D600CDA20B /* DealsCellImpl.swift */,
 			);
 			name = Deals;
 			sourceTree = "<group>";
@@ -366,6 +369,7 @@
 				EC81FAB71C8198AE00CDA20B /* Cell.swift in Sources */,
 				C34F577C1C816231001B7D9F /* GlobalEnums.swift in Sources */,
 				EC81FA851C81551300CDA20B /* LoginViewController.swift in Sources */,
+				EC81FAC21C81A6D600CDA20B /* DealsCellImpl.swift in Sources */,
 				EC81FAB51C8198AE00CDA20B /* BaseCell.swift in Sources */,
 				EC81FAB61C8198AE00CDA20B /* TableViewBase.swift in Sources */,
 				C34F57841C8180DB001B7D9F /* HandleAuthProtocol.swift in Sources */,
