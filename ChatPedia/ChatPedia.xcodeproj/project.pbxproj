@@ -26,6 +26,8 @@
 		EC81FAB51C8198AE00CDA20B /* BaseCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC81FAB21C8198AE00CDA20B /* BaseCell.swift */; };
 		EC81FAB61C8198AE00CDA20B /* TableViewBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC81FAB31C8198AE00CDA20B /* TableViewBase.swift */; };
 		EC81FAB71C8198AE00CDA20B /* Cell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC81FAB41C8198AE00CDA20B /* Cell.swift */; };
+		EC81FAB91C81A3C500CDA20B /* DealLocations in Resources */ = {isa = PBXBuildFile; fileRef = EC81FAB81C81A3C500CDA20B /* DealLocations */; };
+		EC81FABE1C81A57300CDA20B /* DealsTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC81FABD1C81A57300CDA20B /* DealsTableView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -64,6 +66,8 @@
 		EC81FAB21C8198AE00CDA20B /* BaseCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseCell.swift; sourceTree = "<group>"; };
 		EC81FAB31C8198AE00CDA20B /* TableViewBase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewBase.swift; sourceTree = "<group>"; };
 		EC81FAB41C8198AE00CDA20B /* Cell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Cell.swift; sourceTree = "<group>"; };
+		EC81FAB81C81A3C500CDA20B /* DealLocations */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = DealLocations; sourceTree = "<group>"; };
+		EC81FABD1C81A57300CDA20B /* DealsTableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DealsTableView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -126,11 +130,13 @@
 			isa = PBXGroup;
 			children = (
 				EC81FA821C81551300CDA20B /* AppDelegate.swift */,
+				EC81FABC1C81A4AF00CDA20B /* Explore */,
+				EC81FABA1C81A3E100CDA20B /* Deals */,
+				EC81FABB1C81A49900CDA20B /* Favorites */,
 				EC81FAB01C818E1100CDA20B /* Chat */,
-				EC81FA881C81551300CDA20B /* Main.storyboard */,
 				EC81FAB11C818E4800CDA20B /* View */,
+				EC81FA881C81551300CDA20B /* Main.storyboard */,
 				C34F57791C8161BA001B7D9F /* Utilities.storyboard */,
-				C34F577B1C816231001B7D9F /* GlobalEnums.swift */,
 				EC81FA8B1C81551300CDA20B /* Assets.xcassets */,
 				EC81FA8D1C81551300CDA20B /* LaunchScreen.storyboard */,
 				EC81FA901C81551300CDA20B /* Info.plist */,
@@ -150,6 +156,7 @@
 		EC81FAB01C818E1100CDA20B /* Chat */ = {
 			isa = PBXGroup;
 			children = (
+				C34F577B1C816231001B7D9F /* GlobalEnums.swift */,
 				EC81FA841C81551300CDA20B /* LoginViewController.swift */,
 				C34F57751C815E31001B7D9F /* ChatTableViewController.swift */,
 				C34F57831C8180DB001B7D9F /* HandleAuthProtocol.swift */,
@@ -166,10 +173,33 @@
 			isa = PBXGroup;
 			children = (
 				EC81FAB21C8198AE00CDA20B /* BaseCell.swift */,
+				EC81FABD1C81A57300CDA20B /* DealsTableView.swift */,
 				EC81FAB31C8198AE00CDA20B /* TableViewBase.swift */,
 				EC81FAB41C8198AE00CDA20B /* Cell.swift */,
 			);
 			name = View;
+			sourceTree = "<group>";
+		};
+		EC81FABA1C81A3E100CDA20B /* Deals */ = {
+			isa = PBXGroup;
+			children = (
+				EC81FAB81C81A3C500CDA20B /* DealLocations */,
+			);
+			name = Deals;
+			sourceTree = "<group>";
+		};
+		EC81FABB1C81A49900CDA20B /* Favorites */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Favorites;
+			sourceTree = "<group>";
+		};
+		EC81FABC1C81A4AF00CDA20B /* Explore */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Explore;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -261,6 +291,7 @@
 				EC81FA8F1C81551300CDA20B /* LaunchScreen.storyboard in Resources */,
 				EC81FA8C1C81551300CDA20B /* Assets.xcassets in Resources */,
 				EC81FA8A1C81551300CDA20B /* Main.storyboard in Resources */,
+				EC81FAB91C81A3C500CDA20B /* DealLocations in Resources */,
 				C34F577A1C8161BA001B7D9F /* Utilities.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -340,6 +371,7 @@
 				C34F57841C8180DB001B7D9F /* HandleAuthProtocol.swift in Sources */,
 				C34F577E1C8166B1001B7D9F /* CurrentUser.swift in Sources */,
 				C34F57761C815E31001B7D9F /* ChatTableViewController.swift in Sources */,
+				EC81FABE1C81A57300CDA20B /* DealsTableView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -1,5 +1,5 @@
 //
-//  TableViewBase.swift
+//  DealsTableView.swift
 //  ChatPedia
 //
 //  Created by Isaac Albets Ramonet on 27/02/16.
@@ -8,15 +8,15 @@
 
 import UIKit
 
-class MainTableViewController: UITableViewController {
+class DealsTableview : UITableViewController {
     
     let kCloseCellHeight: CGFloat = 179
     let kOpenCellHeight: CGFloat = 488
-
+    
     let kRowsCount = 10
     
     var cellHeights = [CGFloat]()
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -30,13 +30,13 @@ class MainTableViewController: UITableViewController {
             cellHeights.append(kCloseCellHeight)
         }
     }
-
+    
     // MARK: - Table view data source
-
+    
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 10
     }
-
+    
     override func tableView(tableView: UITableView, willDisplayCell cell: UITableViewCell, forRowAtIndexPath indexPath: NSIndexPath) {
         
         if cell is FoldingCell {
@@ -50,10 +50,10 @@ class MainTableViewController: UITableViewController {
             }
         }
     }
-
+    
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("FoldingCell", forIndexPath: indexPath)
-
+        
         return cell
     }
     
@@ -66,7 +66,7 @@ class MainTableViewController: UITableViewController {
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         
         let cell = tableView.cellForRowAtIndexPath(indexPath) as! FoldingCell
-
+        
         
     }
 }

@@ -1,9 +1,9 @@
 //
-//  DemoCell.swift
-//  FoldingCell
+//  DealsTableView.swift
+//  ChatPedia
 //
-//  Created by Alex K. on 25/12/15.
-//  Copyright © 2015 Alex K. All rights reserved.
+//  Created by Isaac Albets Ramonet on 27/02/16.
+//  Copyright © 2016 LaunchHackathon. All rights reserved.
 //
 
 import UIKit
