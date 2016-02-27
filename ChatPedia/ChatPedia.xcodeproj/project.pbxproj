@@ -120,15 +120,9 @@
 			isa = PBXGroup;
 			children = (
 				EC81FA821C81551300CDA20B /* AppDelegate.swift */,
-				EC81FA841C81551300CDA20B /* LoginViewController.swift */,
-				C34F57751C815E31001B7D9F /* ChatTableViewController.swift */,
-				C34F57831C8180DB001B7D9F /* HandleAuthProtocol.swift */,
-				C34F57771C815E58001B7D9F /* ChatTableViewCell.swift */,
-				EC81FA861C81551300CDA20B /* ChatViewController.swift */,
-				C34F577F1C816969001B7D9F /* ChatMessage.swift */,
-				C34F577D1C8166B1001B7D9F /* CurrentUser.swift */,
-				C34F57811C816D75001B7D9F /* CoreFirebaseData.swift */,
+				EC81FAB01C818E1100CDA20B /* Chat */,
 				EC81FA881C81551300CDA20B /* Main.storyboard */,
+				EC81FAB11C818E4800CDA20B /* View */,
 				C34F57791C8161BA001B7D9F /* Utilities.storyboard */,
 				C34F577B1C816231001B7D9F /* GlobalEnums.swift */,
 				EC81FA8B1C81551300CDA20B /* Assets.xcassets */,
@@ -145,6 +139,28 @@
 				EC81FA9B1C81551300CDA20B /* Info.plist */,
 			);
 			path = ChatPediaTests;
+			sourceTree = "<group>";
+		};
+		EC81FAB01C818E1100CDA20B /* Chat */ = {
+			isa = PBXGroup;
+			children = (
+				EC81FA841C81551300CDA20B /* LoginViewController.swift */,
+				C34F57751C815E31001B7D9F /* ChatTableViewController.swift */,
+				C34F57831C8180DB001B7D9F /* HandleAuthProtocol.swift */,
+				C34F57771C815E58001B7D9F /* ChatTableViewCell.swift */,
+				EC81FA861C81551300CDA20B /* ChatViewController.swift */,
+				C34F577F1C816969001B7D9F /* ChatMessage.swift */,
+				C34F577D1C8166B1001B7D9F /* CurrentUser.swift */,
+				C34F57811C816D75001B7D9F /* CoreFirebaseData.swift */,
+			);
+			name = Chat;
+			sourceTree = "<group>";
+		};
+		EC81FAB11C818E4800CDA20B /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -200,7 +216,7 @@
 				TargetAttributes = {
 					EC81FA7E1C81551300CDA20B = {
 						CreatedOnToolsVersion = 7.2.1;
-						DevelopmentTeam = 68KS6FN57P;
+						DevelopmentTeam = EDUH3PA3FS;
 					};
 					EC81FA941C81551300CDA20B = {
 						CreatedOnToolsVersion = 7.2.1;
@@ -442,10 +458,12 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = ChatPedia/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.LaunchHackathon.ChatPedia;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -455,10 +473,12 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = ChatPedia/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.LaunchHackathon.ChatPedia;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};

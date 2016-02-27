@@ -41,8 +41,7 @@ class ChatViewController: JSQMessagesViewController {
         
         
         // Firebase
-        messageRef = roomRef.childByAppendingPath("messages")
-
+        messageRef = CoreFirebaseData.sharedInstance.ref.childByAppendingPath("messages")
         self.senderId = CurrentUser.sharedInstance.authData.uid
         self.senderDisplayName = CurrentUser.sharedInstance.displayName
         
