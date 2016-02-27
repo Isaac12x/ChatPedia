@@ -10,6 +10,11 @@ import UIKit
 
 class DealsCellImpl: FoldingCell {
     
+    // ADD The 
+    @IBOutlet weak var priceLabel: UILabel!
+    @IBOutlet weak var destinationLabel: UILabel!
+
+    
     override func awakeFromNib() {
         
         foregroundView.layer.cornerRadius = 10

@@ -177,7 +177,7 @@
         <!--Item-->
         <scene sceneID="0vP-GK-BAv">
             <objects>
-                <tableViewController storyboardIdentifier="ExploreViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="oLw-5H-ZiP" customClass="MainTableViewController" customModule="ChatPedia" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="ExploreVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="oLw-5H-ZiP" customClass="MainTableViewController" customModule="ChatPedia" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="none" showsSelectionImmediatelyOnTouchBegin="NO" rowHeight="667" sectionHeaderHeight="28" sectionFooterHeight="28" id="uZp-fM-hfi">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="695"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -193,41 +193,8 @@
                                     <subviews>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yfQ-gw-b2k" userLabel="Foreground" customClass="RotatedView" customModule="ChatPedia" customModuleProvider="target">
                                             <rect key="frame" x="20" y="7" width="560" height="165"/>
-                                            <subviews>
-                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fMN-6z-lQ0" userLabel="LeftView">
-                                                    <rect key="frame" x="0.0" y="0.0" width="88" height="165"/>
-                                                    <subviews>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5K9-TM-0bb">
-                                                            <rect key="frame" x="13" y="53" width="57" height="45"/>
-                                                            <fontDescription key="fontDescription" type="system" pointSize="22"/>
-                                                            <color key="textColor" red="0.99889823720000004" green="0.99889823720000004" blue="0.99889823720000004" alpha="1" colorSpace="calibratedRGB"/>
-                                                            <nil key="highlightedColor"/>
-                                                        </label>
-                                                    </subviews>
-                                                    <color key="backgroundColor" red="0.36470588240000001" green="0.2901960784" blue="0.59999999999999998" alpha="1" colorSpace="calibratedRGB"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="width" constant="88" id="ypE-uU-bmg"/>
-                                                    </constraints>
-                                                </view>
-                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="v0e-uz-rhb" userLabel="line">
-                                                    <rect key="frame" x="120" y="52" width="424" height="1"/>
-                                                    <color key="backgroundColor" red="0.87843137250000003" green="0.87843137250000003" blue="0.87843137250000003" alpha="1" colorSpace="calibratedRGB"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="height" constant="1" id="O0e-yp-R6w"/>
-                                                    </constraints>
-                                                </view>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="arrow" translatesAutoresizingMaskIntoConstraints="NO" id="mOR-Lq-Wvp">
-                                                    <rect key="frame" x="519" y="78" width="25" height="43"/>
-                                                </imageView>
-                                            </subviews>
                                             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                             <constraints>
-                                                <constraint firstItem="v0e-uz-rhb" firstAttribute="leading" secondItem="yfQ-gw-b2k" secondAttribute="leading" constant="120" id="2CK-So-zU0"/>
-                                                <constraint firstItem="fMN-6z-lQ0" firstAttribute="top" secondItem="yfQ-gw-b2k" secondAttribute="top" id="54v-CQ-Fkt"/>
-                                                <constraint firstAttribute="bottom" secondItem="fMN-6z-lQ0" secondAttribute="bottom" id="9fg-J2-U0N"/>
-                                                <constraint firstItem="v0e-uz-rhb" firstAttribute="top" secondItem="yfQ-gw-b2k" secondAttribute="top" constant="52" id="FgX-w5-r3w"/>
-                                                <constraint firstAttribute="trailing" secondItem="v0e-uz-rhb" secondAttribute="trailing" constant="16" id="iPL-ya-tTr"/>
-                                                <constraint firstItem="fMN-6z-lQ0" firstAttribute="leading" secondItem="yfQ-gw-b2k" secondAttribute="leading" id="ohB-9G-oLp"/>
                                                 <constraint firstAttribute="height" constant="165" id="yCG-o9-WWc"/>
                                             </constraints>
                                         </view>
