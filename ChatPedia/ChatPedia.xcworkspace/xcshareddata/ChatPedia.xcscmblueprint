@@ -1,14 +1,18 @@
 {
-  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "FDCA9A15464573443D8EF3965A540ACAA18BBA9B",
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "FDCA9A15464573443D8EF3965A540ACAA18BBA9B+++4066906",
   "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
 
   },
   "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
-    "FDCA9A15464573443D8EF3965A540ACAA18BBA9B" : 0
+    "FDCA9A15464573443D8EF3965A540ACAA18BBA9B+++263AB6D" : 0,
+    "FDCA9A15464573443D8EF3965A540ACAA18BBA9B+++573F943" : 0,
+    "FDCA9A15464573443D8EF3965A540ACAA18BBA9B+++4066906" : 0
   },
   "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "14D76A48-303D-4D36-9387-8CED89535245",
   "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
-    "FDCA9A15464573443D8EF3965A540ACAA18BBA9B" : ""
+    "FDCA9A15464573443D8EF3965A540ACAA18BBA9B+++263AB6D" : "",
+    "FDCA9A15464573443D8EF3965A540ACAA18BBA9B+++573F943" : "",
+    "FDCA9A15464573443D8EF3965A540ACAA18BBA9B+++4066906" : "xpedia\/"
   },
   "DVTSourceControlWorkspaceBlueprintNameKey" : "ChatPedia",
   "DVTSourceControlWorkspaceBlueprintVersion" : 204,
@@ -17,12 +21,17 @@
     {
       "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/Isaac12x\/ChatPedia.git",
       "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
-      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "FDCA9A15464573443D8EF3965A540ACAA18BBA9B"
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "FDCA9A15464573443D8EF3965A540ACAA18BBA9B+++263AB6D"
     },
     {
       "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/Isaac12x\/ChatPedia.git",
       "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
-      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "FDCA9A15464573443D8EF3965A540ACAA18BBA9B"
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "FDCA9A15464573443D8EF3965A540ACAA18BBA9B+++4066906"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/Isaac12x\/ChatPedia.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "FDCA9A15464573443D8EF3965A540ACAA18BBA9B+++573F943"
     }
   ]
 }
