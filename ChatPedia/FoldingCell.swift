@@ -14,6 +14,7 @@ public class FoldingCell: UITableViewCell {
   
   @IBOutlet weak public var foregroundView: RotatedView!
   var animationView: UIView?
+    
   
   @IBInspectable public var itemCount: NSInteger = 2 //count of folding
   
@@ -46,6 +47,7 @@ public class FoldingCell: UITableViewCell {
     //createAnimationView();
     self.contentView.bringSubviewToFront(foregroundView)
   }
+    
   
 
 }

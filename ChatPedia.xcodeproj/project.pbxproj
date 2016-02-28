@@ -21,6 +21,8 @@
 		D487030E1C82457800E4775E /* FavoritesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D487030D1C82457800E4775E /* FavoritesTableViewController.swift */; };
 		D48703101C82463400E4775E /* FavoritesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D487030F1C82463400E4775E /* FavoritesTableViewCell.swift */; };
 		D48703121C82469400E4775E /* FavoritesCellImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = D48703111C82469400E4775E /* FavoritesCellImpl.swift */; };
+		D48703141C82C1A200E4775E /* ExploreTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D48703131C82C1A200E4775E /* ExploreTableViewController.swift */; };
+		D48703161C82C29A00E4775E /* ExploreTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D48703151C82C29A00E4775E /* ExploreTableViewCell.swift */; };
 		EC81FA831C81551300CDA20B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC81FA821C81551300CDA20B /* AppDelegate.swift */; };
 		EC81FA851C81551300CDA20B /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC81FA841C81551300CDA20B /* LoginViewController.swift */; };
 		EC81FA871C81551300CDA20B /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC81FA861C81551300CDA20B /* ChatViewController.swift */; };
@@ -35,9 +37,6 @@
 		EC81FABE1C81A57300CDA20B /* DealsTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC81FABD1C81A57300CDA20B /* DealsTableView.swift */; };
 		EC81FAC61C81C0C400CDA20B /* ExpediaWebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC81FAC51C81C0C400CDA20B /* ExpediaWebViewController.swift */; };
 		ECA814391C81CF4700DEB9D8 /* OneShotLocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECA814381C81CF4700DEB9D8 /* OneShotLocationManager.swift */; };
-		ECA8143B1C81CF9E00DEB9D8 /* ExploreTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECA8143A1C81CF9E00DEB9D8 /* ExploreTableView.swift */; };
-		ECA814431C82033900DEB9D8 /* ExploreCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECA814421C82033900DEB9D8 /* ExploreCell.swift */; };
-		ECA814451C82040B00DEB9D8 /* ExploreCellImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECA814441C82040B00DEB9D8 /* ExploreCellImpl.swift */; };
 		ECA814731C821EB700DEB9D8 /* AddDatePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECA814721C821EB700DEB9D8 /* AddDatePicker.swift */; };
 /* End PBXBuildFile section */
 
@@ -69,6 +68,8 @@
 		D487030D1C82457800E4775E /* FavoritesTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FavoritesTableViewController.swift; sourceTree = "<group>"; };
 		D487030F1C82463400E4775E /* FavoritesTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FavoritesTableViewCell.swift; sourceTree = "<group>"; };
 		D48703111C82469400E4775E /* FavoritesCellImpl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FavoritesCellImpl.swift; sourceTree = "<group>"; };
+		D48703131C82C1A200E4775E /* ExploreTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExploreTableViewController.swift; sourceTree = "<group>"; };
+		D48703151C82C29A00E4775E /* ExploreTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExploreTableViewCell.swift; sourceTree = "<group>"; };
 		EC81FA7F1C81551300CDA20B /* ChatPedia.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ChatPedia.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EC81FA821C81551300CDA20B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EC81FA841C81551300CDA20B /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -87,9 +88,6 @@
 		EC81FABD1C81A57300CDA20B /* DealsTableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DealsTableView.swift; sourceTree = "<group>"; };
 		EC81FAC51C81C0C400CDA20B /* ExpediaWebViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExpediaWebViewController.swift; sourceTree = "<group>"; };
 		ECA814381C81CF4700DEB9D8 /* OneShotLocationManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OneShotLocationManager.swift; sourceTree = "<group>"; };
-		ECA8143A1C81CF9E00DEB9D8 /* ExploreTableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExploreTableView.swift; sourceTree = "<group>"; };
-		ECA814421C82033900DEB9D8 /* ExploreCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExploreCell.swift; sourceTree = "<group>"; };
-		ECA814441C82040B00DEB9D8 /* ExploreCellImpl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExploreCellImpl.swift; sourceTree = "<group>"; };
 		ECA814721C821EB700DEB9D8 /* AddDatePicker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddDatePicker.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -238,9 +236,8 @@
 		EC81FABC1C81A4AF00CDA20B /* Explore */ = {
 			isa = PBXGroup;
 			children = (
-				ECA8143A1C81CF9E00DEB9D8 /* ExploreTableView.swift */,
-				ECA814421C82033900DEB9D8 /* ExploreCell.swift */,
-				ECA814441C82040B00DEB9D8 /* ExploreCellImpl.swift */,
+				D48703131C82C1A200E4775E /* ExploreTableViewController.swift */,
+				D48703151C82C29A00E4775E /* ExploreTableViewCell.swift */,
 			);
 			name = Explore;
 			sourceTree = "<group>";
@@ -410,8 +407,6 @@
 				EC81FA831C81551300CDA20B /* AppDelegate.swift in Sources */,
 				C34F57781C815E58001B7D9F /* ChatTableViewCell.swift in Sources */,
 				EC81FAB71C8198AE00CDA20B /* Cell.swift in Sources */,
-				ECA8143B1C81CF9E00DEB9D8 /* ExploreTableView.swift in Sources */,
-				ECA814451C82040B00DEB9D8 /* ExploreCellImpl.swift in Sources */,
 				C34F577C1C816231001B7D9F /* GlobalEnums.swift in Sources */,
 				EC81FA851C81551300CDA20B /* LoginViewController.swift in Sources */,
 				D48703101C82463400E4775E /* FavoritesTableViewCell.swift in Sources */,
@@ -419,13 +414,14 @@
 				D487030E1C82457800E4775E /* FavoritesTableViewController.swift in Sources */,
 				EC81FAB61C8198AE00CDA20B /* TableViewBase.swift in Sources */,
 				ECA814391C81CF4700DEB9D8 /* OneShotLocationManager.swift in Sources */,
+				D48703161C82C29A00E4775E /* ExploreTableViewCell.swift in Sources */,
 				D48703121C82469400E4775E /* FavoritesCellImpl.swift in Sources */,
 				C34F57841C8180DB001B7D9F /* HandleAuthProtocol.swift in Sources */,
+				D48703141C82C1A200E4775E /* ExploreTableViewController.swift in Sources */,
 				ECA814731C821EB700DEB9D8 /* AddDatePicker.swift in Sources */,
 				C34F577E1C8166B1001B7D9F /* CurrentUser.swift in Sources */,
 				C34F57761C815E31001B7D9F /* ChatTableViewController.swift in Sources */,
 				EC81FABE1C81A57300CDA20B /* DealsTableView.swift in Sources */,
-				ECA814431C82033900DEB9D8 /* ExploreCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
