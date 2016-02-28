@@ -43,23 +43,7 @@ class ChatViewController: JSQMessagesViewController {
         super.viewDidLoad()
         
         // Firebase
-//        roomRef = CoreFirebaseData.sharedInstance.ref.childByAppendingPath("room").childByAppendingPath(currentRoomId)
         messageRef = roomRef.childByAppendingPath("messages")
-        
-        // Get all rooms
-        // TODO: Hook this up later fully.  just print out for now
-//        roomRef.observeSingleEventOfType(.Value, withBlock: { snapshot in
-//            for room in snapshot.children.allObjects as! [FDataSnapshot] {
-//                //print(room.value)
-//                self.currentRoomId = room.key
-//            }
-//        })
-
-        messageRef.observeSingleEventOfType(.Value, withBlock: { snapshot in
-            for msg in snapshot.children.allObjects as! [FDataSnapshot] {
-                print(msg.value)
-            }
-        })
         
         self.senderId = CurrentUser.sharedInstance.authData.uid
         self.senderDisplayName = CurrentUser.sharedInstance.displayName
@@ -94,16 +78,20 @@ class ChatViewController: JSQMessagesViewController {
             let senderName = snapshot.value["senderName"] as! String
             let dateStr = snapshot.value["date"] as! String
             
-            var dateFormatter = NSDateFormatter()
+            let dateFormatter = NSDateFormatter()
             dateFormatter.timeZone = NSTimeZone.systemTimeZone()
             dateFormatter.locale = NSLocale.currentLocale()
             dateFormatter.dateFormat = "yyyy-MM-dd hh:mm:ss Z"
             dateFormatter.formatterBehavior = NSDateFormatterBehavior.BehaviorDefault
             
-            let date = dateFormatter.dateFromString(dateStr)
-            
+            if let date = dateFormatter.dateFromString(dateStr) {
+                self.addMessage(id, text: text, senderName: senderName, date: date)
+
+            } else {
+                self.addMessage(id, text: text, senderName: senderName, date: NSDate())
+            }
+
             // 4
-            self.addMessage(id, text: text, senderName: senderName, date: date!)
             
             // 5
             self.finishReceivingMessage()
@@ -156,10 +144,9 @@ class ChatViewController: JSQMessagesViewController {
     }
     
     override func collectionView(collectionView: JSQMessagesCollectionView!, attributedTextForCellTopLabelAtIndexPath indexPath: NSIndexPath!) -> NSAttributedString! {
-        print(indexPath.item)
         if indexPath.item % 3 == 0 {
             let message = self.messages[indexPath.item]
-            print(message.date)
+
             return JSQMessagesTimestampFormatter.sharedFormatter().attributedTimestampForDate(message.date)
         }
         else{
