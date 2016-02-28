@@ -1,12 +1,7 @@
 PODS:
   - Firebase (2.5.1)
-  - FirebaseUI/AuthHelper (0.3.2):
-    - Firebase (~> 2.2)
   - FirebaseUI/Core (0.3.2):
     - Firebase (~> 2.2)
-  - FirebaseUI/Password (0.3.2):
-    - Firebase (~> 2.2)
-    - FirebaseUI/AuthHelper
   - JSQMessagesViewController (7.2.0):
     - JSQSystemSoundPlayer (~> 2.0.1)
   - JSQSystemSoundPlayer (2.0.1)
@@ -14,7 +9,6 @@ PODS:
 DEPENDENCIES:
   - Firebase
   - FirebaseUI/Core (~> 0.3)
-  - FirebaseUI/Password (~> 0.3.2)
   - JSQMessagesViewController
 
 SPEC CHECKSUMS:

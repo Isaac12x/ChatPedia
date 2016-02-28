@@ -12,28 +12,9 @@ import Firebase
 
 class ChatTableViewController: UITableViewController, HandleAuthProtocol {
     
-    //Auth
-//    var loginViewController: FirebaseLoginViewController!
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        
-//        self.loginViewController = FirebaseLoginViewController(ref: CoreFirebaseData.sharedInstance.ref)
-////        self.loginViewController.enableProvider(FAuthProvider.Facebook)
-////        self.loginViewController.enableProvider(FAuthProvider.Google)
-////        self.loginViewController.enableProvider(FAuthProvider.Twitter)
-//        self.loginViewController.enableProvider(FAuthProvider.Password)
-//
-//        self.loginViewController.didDismissWithBlock { (authData, error) -> Void in
-//            if let error = error {
-//                print("in \(self.classForCoder) error: \(error.description)")
-//            } else if let auth = authData {
-//                CurrentUser.sharedInstance.authData = auth
-//                CurrentUser.sharedInstance.dummyProfileInfo()
-//                
-//            }
-//        }
         
     }
     
