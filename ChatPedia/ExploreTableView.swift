@@ -29,6 +29,20 @@ class ExploreTableView : UITableViewController{
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        //firebase login
+        if CurrentUser.sharedInstance.authData == nil {
+            CoreFirebaseData.sharedInstance.ref.authAnonymouslyWithCompletionBlock { (error, authData) -> Void in
+                if let error = error {
+                    print("in \(self.classForCoder) error: \(error.description)")
+                } else if let auth = authData {
+                    CurrentUser.sharedInstance.authData = auth
+                    CurrentUser.sharedInstance.dummyProfileInfo()
+                    
+                }
+            }
+            
+        }
+        
              self.tableView.backgroundColor = UIColor(patternImage: UIImage(named: "background")!)
                 
         createCellHeightsArray()

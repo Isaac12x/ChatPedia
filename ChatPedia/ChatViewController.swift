@@ -16,7 +16,7 @@ class ChatViewController: JSQMessagesViewController {
     var outgoingBubbleImageView: JSQMessagesBubbleImage!
     var incomingBubbleImageView: JSQMessagesBubbleImage!
     
-    var currentRoomId = "-KBWKykTqc5R3NT4C1qt"  // set Hop-On Hop-Off Bus Tour as default
+//    var currentRoomId = "-KBWKykTqc5R3NT4C1qt"  // set Hop-On Hop-Off Bus Tour as default
     
     // Firebase references.
     var messageRef     : Firebase!
@@ -43,7 +43,7 @@ class ChatViewController: JSQMessagesViewController {
         super.viewDidLoad()
         
         // Firebase
-        roomRef = CoreFirebaseData.sharedInstance.ref.childByAppendingPath("room").childByAppendingPath(currentRoomId)
+//        roomRef = CoreFirebaseData.sharedInstance.ref.childByAppendingPath("room").childByAppendingPath(currentRoomId)
         messageRef = roomRef.childByAppendingPath("messages")
         
         // Get all rooms
@@ -115,7 +115,6 @@ class ChatViewController: JSQMessagesViewController {
         let messageItem = [ // 2
             "text": text,
             "senderId": senderId,
-            "roomId": currentRoomId,
             "senderName": senderDisplayName,
             "date": date.description
         ]
@@ -206,7 +205,7 @@ class ChatViewController: JSQMessagesViewController {
     }
     
     private func observeTyping() {
-        let typingIndicatorRef = CoreFirebaseData.sharedInstance.ref.childByAppendingPath("typingIndicator")
+        let typingIndicatorRef = roomRef.childByAppendingPath("typingIndicator")
         userIsTypingRef = typingIndicatorRef.childByAppendingPath(senderId)
         userIsTypingRef.onDisconnectRemoveValue()
         

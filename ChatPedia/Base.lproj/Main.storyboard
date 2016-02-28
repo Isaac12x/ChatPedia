@@ -5,7 +5,7 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
     </dependencies>
     <scenes>
-        <!--Root View Controller-->
+        <!--Chat Groups-->
         <scene sceneID="9vY-mf-xva">
             <objects>
                 <tableViewController storyboardIdentifier="ChatVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="DR9-8n-amm" customClass="ChatTableViewController" customModule="ChatPedia" customModuleProvider="target" sceneMemberID="viewController">
@@ -18,7 +18,7 @@
                                 <rect key="frame" x="0.0" y="92" width="600" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="qgE-go-VFT" id="QrG-ne-odd">
-                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                             </tableViewCell>
@@ -28,7 +28,7 @@
                             <outlet property="delegate" destination="DR9-8n-amm" id="A8j-hy-JRg"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Root View Controller" id="bEv-8S-XPa"/>
+                    <navigationItem key="navigationItem" title="Chat Groups" id="bEv-8S-XPa"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5cW-MJ-v6n" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
