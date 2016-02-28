@@ -28,8 +28,8 @@ class FavoritesTableViewController: UITableViewController {
         let navigationColor = colorWithHexString("#E23928")
         //self.navigationController?.navigationBar.barTintColor = navigationColor
         
-        UINavigationBar.appearance().tintColor = navigationColor
-        UINavigationBar.appearance().barTintColor = navigationColor
+//        UINavigationBar.appearance().tintColor = navigationColor
+//        UINavigationBar.appearance().barTintColor = navigationColor
         self.tableView.backgroundColor = UIColor(patternImage: UIImage(named: "background")!)
 
         createCellHeightsArray()

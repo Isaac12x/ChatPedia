@@ -38,7 +38,9 @@ class ChatTableViewController: UITableViewController, HandleAuthProtocol {
             let cell = cell as! ChatTableViewCell
             
             // Populate cell as you see fit, like as below
-            cell.textLabel?.text = snap.key as String
+            let title = snap.value["name"] as? String
+            print(title)
+            cell.textLabel?.text = title
             
             cell.roomRef = CoreFirebaseData.sharedInstance.ref.childByAppendingPath("room").childByAppendingPath(snap.key)
         }
