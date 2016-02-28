@@ -22,10 +22,11 @@ class ExploreTableViewController: UITableViewController {
     var expectedCoordinates: CLLocation!
     let notificationManager = LNRNotificationManager()
     
-    
-    
     override func viewDidLoad() {
         super.viewDidLoad()
+        let model = ExploreModel()
+        
+        var results = model.getSearch()
         
         //firebase login
         if CurrentUser.sharedInstance.authData == nil {
