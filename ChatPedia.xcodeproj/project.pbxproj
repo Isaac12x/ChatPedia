@@ -64,6 +64,7 @@
 		C34F577F1C816969001B7D9F /* ChatMessage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatMessage.swift; sourceTree = "<group>"; };
 		C34F57811C816D75001B7D9F /* CoreFirebaseData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreFirebaseData.swift; sourceTree = "<group>"; };
 		C34F57831C8180DB001B7D9F /* HandleAuthProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HandleAuthProtocol.swift; sourceTree = "<group>"; };
+		C39E101D1C82E87900706C11 /* FavoritesCellImpl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FavoritesCellImpl.swift; sourceTree = "<group>"; };
 		C3D893E01C828DCF00D0A296 /* SweetAlert.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SweetAlert.swift; sourceTree = "<group>"; };
 		C3D893E21C828E0E00D0A296 /* LinearProgressBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LinearProgressBar.swift; sourceTree = "<group>"; };
 		D48703081C81ACB100E4775E /* LemonMilk.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = LemonMilk.otf; sourceTree = "<group>"; };
@@ -244,6 +245,7 @@
 			children = (
 				D48703131C82C1A200E4775E /* ExploreTableViewController.swift */,
 				D48703151C82C29A00E4775E /* ExploreTableViewCell.swift */,
+				C39E101D1C82E87900706C11 /* FavoritesCellImpl.swift */,
 			);
 			name = Explore;
 			sourceTree = "<group>";

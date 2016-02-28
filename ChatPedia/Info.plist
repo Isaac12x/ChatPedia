@@ -23,7 +23,13 @@
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
 	<key>NSLocationWhenInUseUsageDescription</key>
-	<string>Give us permission to use your device&apos;s location</string>
+	<string>Give us permission to use your device's location</string>
+	<key>UIAppFonts</key>
+	<array>
+		<string>LemonMilk.otf</string>
+		<string>CaviarDreams.ttf</string>
+		<string>CaviarDreams_Bold.ttf</string>
+	</array>
 	<key>UILaunchStoryboardName</key>
 	<string>LaunchScreen</string>
 	<key>UIMainStoryboardFile</key>
@@ -54,12 +60,6 @@
 		<string>UIInterfaceOrientationPortraitUpsideDown</string>
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
-	</array>
-	<key>UIAppFonts</key>
-	<array>
-		<string>LemonMilk.otf</string>
-		<string>CaviarDreams.ttf</string>
-		<string>CaviarDreams_Bold.ttf</string>
 	</array>
 	<key>UIViewControllerBasedStatusBarAppearance</key>
 	<false/>
