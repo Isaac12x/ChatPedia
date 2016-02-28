@@ -18,13 +18,6 @@ class ExploreTableViewCell: UITableViewCell {
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         
-    
-//        categoryBackgroundPic.layer.cornerRadius = 10.0
-//        categoryBackgroundPic.clipsToBounds = true
-
-//        layer.cornerRadius = 10.0
-//        layer.masksToBounds = true
-        
     }
     
     func configureCell(labelString: String, imageIcon: String, imageBackground: String) {

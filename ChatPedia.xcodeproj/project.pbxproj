@@ -18,6 +18,9 @@
 		C34F57841C8180DB001B7D9F /* HandleAuthProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = C34F57831C8180DB001B7D9F /* HandleAuthProtocol.swift */; };
 		C3D893E11C828DCF00D0A296 /* SweetAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3D893E01C828DCF00D0A296 /* SweetAlert.swift */; };
 		C3D893E31C828E0E00D0A296 /* LinearProgressBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3D893E21C828E0E00D0A296 /* LinearProgressBar.swift */; };
+		D44B85951C82F43A00A793B1 /* ExploreDetailTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D44B85941C82F43A00A793B1 /* ExploreDetailTableViewController.swift */; };
+		D44B85971C82F49C00A793B1 /* ExploreDetailTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D44B85961C82F49C00A793B1 /* ExploreDetailTableViewCell.swift */; };
+		D44B85991C83347000A793B1 /* DetailTripVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D44B85981C83347000A793B1 /* DetailTripVC.swift */; };
 		D48703091C81ACB100E4775E /* LemonMilk.otf in Resources */ = {isa = PBXBuildFile; fileRef = D48703081C81ACB100E4775E /* LemonMilk.otf */; };
 		D487030B1C81ACBC00E4775E /* CaviarDreams.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D487030A1C81ACBC00E4775E /* CaviarDreams.ttf */; };
 		D487030E1C82457800E4775E /* FavoritesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D487030D1C82457800E4775E /* FavoritesTableViewController.swift */; };
@@ -66,6 +69,9 @@
 		C34F57831C8180DB001B7D9F /* HandleAuthProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HandleAuthProtocol.swift; sourceTree = "<group>"; };
 		C3D893E01C828DCF00D0A296 /* SweetAlert.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SweetAlert.swift; sourceTree = "<group>"; };
 		C3D893E21C828E0E00D0A296 /* LinearProgressBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LinearProgressBar.swift; sourceTree = "<group>"; };
+		D44B85941C82F43A00A793B1 /* ExploreDetailTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExploreDetailTableViewController.swift; sourceTree = "<group>"; };
+		D44B85961C82F49C00A793B1 /* ExploreDetailTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExploreDetailTableViewCell.swift; sourceTree = "<group>"; };
+		D44B85981C83347000A793B1 /* DetailTripVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailTripVC.swift; sourceTree = "<group>"; };
 		D48703081C81ACB100E4775E /* LemonMilk.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = LemonMilk.otf; sourceTree = "<group>"; };
 		D487030A1C81ACBC00E4775E /* CaviarDreams.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = CaviarDreams.ttf; sourceTree = "<group>"; };
 		D487030C1C81ACC500E4775E /* CaviarDreams_Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = CaviarDreams_Bold.ttf; sourceTree = "<group>"; };
@@ -244,6 +250,9 @@
 			children = (
 				D48703131C82C1A200E4775E /* ExploreTableViewController.swift */,
 				D48703151C82C29A00E4775E /* ExploreTableViewCell.swift */,
+				D44B85941C82F43A00A793B1 /* ExploreDetailTableViewController.swift */,
+				D44B85961C82F49C00A793B1 /* ExploreDetailTableViewCell.swift */,
+				D44B85981C83347000A793B1 /* DetailTripVC.swift */,
 			);
 			name = Explore;
 			sourceTree = "<group>";
@@ -409,6 +418,8 @@
 				EC81FA871C81551300CDA20B /* ChatViewController.swift in Sources */,
 				C34F57801C816969001B7D9F /* ChatMessage.swift in Sources */,
 				C34F57821C816D75001B7D9F /* CoreFirebaseData.swift in Sources */,
+				D44B85991C83347000A793B1 /* DetailTripVC.swift in Sources */,
+				D44B85951C82F43A00A793B1 /* ExploreDetailTableViewController.swift in Sources */,
 				EC81FAC61C81C0C400CDA20B /* ExpediaWebViewController.swift in Sources */,
 				EC81FA831C81551300CDA20B /* AppDelegate.swift in Sources */,
 				C34F57781C815E58001B7D9F /* ChatTableViewCell.swift in Sources */,
@@ -425,6 +436,7 @@
 				D48703161C82C29A00E4775E /* ExploreTableViewCell.swift in Sources */,
 				D48703121C82469400E4775E /* FavoritesCellImpl.swift in Sources */,
 				C34F57841C8180DB001B7D9F /* HandleAuthProtocol.swift in Sources */,
+				D44B85971C82F49C00A793B1 /* ExploreDetailTableViewCell.swift in Sources */,
 				D48703141C82C1A200E4775E /* ExploreTableViewController.swift in Sources */,
 				ECA814731C821EB700DEB9D8 /* AddDatePicker.swift in Sources */,
 				C34F577E1C8166B1001B7D9F /* CurrentUser.swift in Sources */,
