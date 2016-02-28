@@ -7,17 +7,26 @@
 //
 
 import UIKit
+import FirebaseUI
+import Firebase
 
 class ChatTableViewController: UITableViewController, HandleAuthProtocol {
 
+    var firebaseDataSource: FirebaseTableViewDataSource!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem()
+        self.firebaseDataSource = FirebaseTableViewDataSource(ref: CoreFirebaseData.sharedInstance.ref.childByAppendingPath("room"), cellReuseIdentifier: ChatTableViewCell.identifier, view: self.tableView)
+        
+        self.firebaseDataSource.populateCellWithBlock { (cell: UITableViewCell, obj: NSObject) -> Void in
+            let snap = obj as! FDataSnapshot
+            
+            // Populate cell as you see fit, like as below
+            cell.textLabel?.text = snap.key as String
+        }
+        
+        self.tableView.dataSource = self.firebaseDataSource
     }
     
     override func viewDidAppear(animated: Bool) {

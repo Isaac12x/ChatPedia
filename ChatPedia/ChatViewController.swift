@@ -62,8 +62,7 @@ class ChatViewController: JSQMessagesViewController {
         })
         
         self.senderId = CurrentUser.sharedInstance.authData.uid
-        //self.senderDisplayName = CurrentUser.sharedInstance.displayName
-        self.senderDisplayName = "Jane"
+        self.senderDisplayName = CurrentUser.sharedInstance.displayName
         
         observeTyping()
         

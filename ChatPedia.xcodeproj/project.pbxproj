@@ -16,6 +16,8 @@
 		C34F57801C816969001B7D9F /* ChatMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = C34F577F1C816969001B7D9F /* ChatMessage.swift */; };
 		C34F57821C816D75001B7D9F /* CoreFirebaseData.swift in Sources */ = {isa = PBXBuildFile; fileRef = C34F57811C816D75001B7D9F /* CoreFirebaseData.swift */; };
 		C34F57841C8180DB001B7D9F /* HandleAuthProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = C34F57831C8180DB001B7D9F /* HandleAuthProtocol.swift */; };
+		C3D893E11C828DCF00D0A296 /* SweetAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3D893E01C828DCF00D0A296 /* SweetAlert.swift */; };
+		C3D893E31C828E0E00D0A296 /* LinearProgressBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3D893E21C828E0E00D0A296 /* LinearProgressBar.swift */; };
 		D48703091C81ACB100E4775E /* LemonMilk.otf in Resources */ = {isa = PBXBuildFile; fileRef = D48703081C81ACB100E4775E /* LemonMilk.otf */; };
 		D487030B1C81ACBC00E4775E /* CaviarDreams.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D487030A1C81ACBC00E4775E /* CaviarDreams.ttf */; };
 		D487030E1C82457800E4775E /* FavoritesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D487030D1C82457800E4775E /* FavoritesTableViewController.swift */; };
@@ -63,6 +65,8 @@
 		C34F577F1C816969001B7D9F /* ChatMessage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatMessage.swift; sourceTree = "<group>"; };
 		C34F57811C816D75001B7D9F /* CoreFirebaseData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreFirebaseData.swift; sourceTree = "<group>"; };
 		C34F57831C8180DB001B7D9F /* HandleAuthProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HandleAuthProtocol.swift; sourceTree = "<group>"; };
+		C3D893E01C828DCF00D0A296 /* SweetAlert.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SweetAlert.swift; sourceTree = "<group>"; };
+		C3D893E21C828E0E00D0A296 /* LinearProgressBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LinearProgressBar.swift; sourceTree = "<group>"; };
 		D48703081C81ACB100E4775E /* LemonMilk.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = LemonMilk.otf; sourceTree = "<group>"; };
 		D487030A1C81ACBC00E4775E /* CaviarDreams.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = CaviarDreams.ttf; sourceTree = "<group>"; };
 		D487030C1C81ACC500E4775E /* CaviarDreams_Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = CaviarDreams_Bold.ttf; sourceTree = "<group>"; };
@@ -217,6 +221,8 @@
 		EC81FABA1C81A3E100CDA20B /* Deals */ = {
 			isa = PBXGroup;
 			children = (
+				C3D893E21C828E0E00D0A296 /* LinearProgressBar.swift */,
+				C3D893E01C828DCF00D0A296 /* SweetAlert.swift */,
 				EC81FAB81C81A3C500CDA20B /* DealLocations */,
 				EC81FABD1C81A57300CDA20B /* DealsTableView.swift */,
 				ECA814721C821EB700DEB9D8 /* AddDatePicker.swift */,
@@ -409,11 +415,13 @@
 				EC81FAC61C81C0C400CDA20B /* ExpediaWebViewController.swift in Sources */,
 				EC81FA831C81551300CDA20B /* AppDelegate.swift in Sources */,
 				C34F57781C815E58001B7D9F /* ChatTableViewCell.swift in Sources */,
+				C3D893E31C828E0E00D0A296 /* LinearProgressBar.swift in Sources */,
 				EC81FAB71C8198AE00CDA20B /* Cell.swift in Sources */,
 				ECA8143B1C81CF9E00DEB9D8 /* ExploreTableView.swift in Sources */,
 				ECA814451C82040B00DEB9D8 /* ExploreCellImpl.swift in Sources */,
 				C34F577C1C816231001B7D9F /* GlobalEnums.swift in Sources */,
 				EC81FA851C81551300CDA20B /* LoginViewController.swift in Sources */,
+				C3D893E11C828DCF00D0A296 /* SweetAlert.swift in Sources */,
 				D48703101C82463400E4775E /* FavoritesTableViewCell.swift in Sources */,
 				EC81FAB51C8198AE00CDA20B /* FoldingCell.swift in Sources */,
 				D487030E1C82457800E4775E /* FavoritesTableViewController.swift in Sources */,

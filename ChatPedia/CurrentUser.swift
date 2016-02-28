@@ -18,6 +18,6 @@ class CurrentUser: NSObject {
     var profileImage: UIImage?
     
     func dummyProfileInfo() {
-        displayName = "Jonny"
+        displayName = UIDevice.currentDevice().name
     }
 }
