@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--Login View Controller-->
+        <scene sceneID="8KJ-cB-P9t">
+            <objects>
+                <viewController storyboardIdentifier="Login" id="jYh-km-GVz" customClass="LoginViewController" customModule="ChatPedia" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="WaZ-N0-8o8"/>
+                        <viewControllerLayoutGuide type="bottom" id="Isu-fD-9Lm"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="ueM-gT-hh6">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="u3s-rH-O1o">
+                                <rect key="frame" x="40" y="254" width="240" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="fB7-h2-eCP"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <state key="normal" title="Enter"/>
+                                <connections>
+                                    <action selector="didTapLogin:" destination="jYh-km-GVz" eventType="touchUpInside" id="e8V-ZU-OEe"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="u3s-rH-O1o" firstAttribute="centerY" secondItem="ueM-gT-hh6" secondAttribute="centerY" id="8bP-nk-VuW"/>
+                            <constraint firstItem="u3s-rH-O1o" firstAttribute="leading" secondItem="ueM-gT-hh6" secondAttribute="leadingMargin" constant="24" id="KBj-yh-Jku"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="u3s-rH-O1o" secondAttribute="trailing" constant="24" id="Wdl-qx-P8s"/>
+                        </constraints>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <outlet property="loginButton" destination="u3s-rH-O1o" id="PMx-Mv-OyK"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SNO-HO-5ip" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="329" y="278"/>
+        </scene>
+    </scenes>
+</document>
