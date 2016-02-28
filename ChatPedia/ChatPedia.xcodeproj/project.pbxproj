@@ -16,6 +16,7 @@
 		C34F57801C816969001B7D9F /* ChatMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = C34F577F1C816969001B7D9F /* ChatMessage.swift */; };
 		C34F57821C816D75001B7D9F /* CoreFirebaseData.swift in Sources */ = {isa = PBXBuildFile; fileRef = C34F57811C816D75001B7D9F /* CoreFirebaseData.swift */; };
 		C34F57841C8180DB001B7D9F /* HandleAuthProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = C34F57831C8180DB001B7D9F /* HandleAuthProtocol.swift */; };
+		C38B8ED01C82842B00BF17FF /* ChatRoomsDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = C38B8ECF1C82842B00BF17FF /* ChatRoomsDataSource.swift */; };
 		EC81FA831C81551300CDA20B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC81FA821C81551300CDA20B /* AppDelegate.swift */; };
 		EC81FA851C81551300CDA20B /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC81FA841C81551300CDA20B /* LoginViewController.swift */; };
 		EC81FA871C81551300CDA20B /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC81FA861C81551300CDA20B /* ChatViewController.swift */; };
@@ -47,6 +48,7 @@
 		C34F577F1C816969001B7D9F /* ChatMessage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatMessage.swift; sourceTree = "<group>"; };
 		C34F57811C816D75001B7D9F /* CoreFirebaseData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreFirebaseData.swift; sourceTree = "<group>"; };
 		C34F57831C8180DB001B7D9F /* HandleAuthProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HandleAuthProtocol.swift; sourceTree = "<group>"; };
+		C38B8ECF1C82842B00BF17FF /* ChatRoomsDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatRoomsDataSource.swift; sourceTree = "<group>"; };
 		EC81FA7F1C81551300CDA20B /* ChatPedia.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ChatPedia.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EC81FA821C81551300CDA20B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EC81FA841C81551300CDA20B /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -122,6 +124,7 @@
 				EC81FA821C81551300CDA20B /* AppDelegate.swift */,
 				EC81FA841C81551300CDA20B /* LoginViewController.swift */,
 				C34F57751C815E31001B7D9F /* ChatTableViewController.swift */,
+				C38B8ECF1C82842B00BF17FF /* ChatRoomsDataSource.swift */,
 				C34F57831C8180DB001B7D9F /* HandleAuthProtocol.swift */,
 				C34F57771C815E58001B7D9F /* ChatTableViewCell.swift */,
 				EC81FA861C81551300CDA20B /* ChatViewController.swift */,
@@ -303,6 +306,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EC81FA871C81551300CDA20B /* ChatViewController.swift in Sources */,
+				C38B8ED01C82842B00BF17FF /* ChatRoomsDataSource.swift in Sources */,
 				C34F57801C816969001B7D9F /* ChatMessage.swift in Sources */,
 				C34F57821C816D75001B7D9F /* CoreFirebaseData.swift in Sources */,
 				EC81FA831C81551300CDA20B /* AppDelegate.swift in Sources */,
