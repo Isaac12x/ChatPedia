@@ -11,12 +11,13 @@ import FirebaseUI
 import Firebase
 
 class ChatTableViewController: UITableViewController, HandleAuthProtocol {
+    
 
     var firebaseDataSource: FirebaseTableViewDataSource!
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         self.firebaseDataSource = FirebaseTableViewDataSource(ref: CoreFirebaseData.sharedInstance.ref.childByAppendingPath("room"), cellReuseIdentifier: ChatTableViewCell.identifier, view: self.tableView)
         
         self.firebaseDataSource.populateCellWithBlock { (cell: UITableViewCell, obj: NSObject) -> Void in
@@ -27,15 +28,19 @@ class ChatTableViewController: UITableViewController, HandleAuthProtocol {
         }
         
         self.tableView.dataSource = self.firebaseDataSource
+        
     }
     
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(animated)
         
         if CurrentUser.sharedInstance.authData == nil {
+            
             presentLoginController()
         }
     }
+    
+
     
     func presentLoginController() {
         let loginVC = UIStoryboard(name: StoryboardID.Utilities.rawValue, bundle: nil).instantiateViewControllerWithIdentifier(StoryboardID.Login.rawValue)
