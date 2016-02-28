@@ -304,7 +304,7 @@
 				TargetAttributes = {
 					EC81FA7E1C81551300CDA20B = {
 						CreatedOnToolsVersion = 7.2.1;
-						DevelopmentTeam = EDUH3PA3FS;
+						DevelopmentTeam = 68KS6FN57P;
 					};
 					EC81FA941C81551300CDA20B = {
 						CreatedOnToolsVersion = 7.2.1;

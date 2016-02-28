@@ -7,10 +7,13 @@
 //
 
 import UIKit
+import Firebase
 
 class ChatTableViewCell: UITableViewCell {
     
     static let identifier = "ChatCell"
+    
+    var roomRef: Firebase!
 
     override func awakeFromNib() {
         super.awakeFromNib()
