@@ -11,20 +11,18 @@ import MapKit
 import EZSwiftExtensions
 import LNRSimpleNotifications
 import AudioToolbox
-
-class ExploreTableViewController : UITableViewController{
-    
-    let kCloseCellHeight: CGFloat = 179
-    let kOpenCellHeight: CGFloat = 488
-    let kRowsCount = 10
-    var cellHeights = [CGFloat]()
+class ExploreTableViewController: UITableViewController {
+    var categoryArr :[String] = ["Day Trips & Excursions", "Food & Drink", "Tours & Sightseeing", "Attractions", "Air & Helicopter Tours", "Adventures","Walking & Bike Tours", "Sightseeing Passes"]
+    var categoryIconArr :[String] = ["category_icon1","category_icon2","category_icon3","category_icon4","category_icon5","category_icon6","category_icon7","category_icon8"]
+    var categoryPicBackArr :[String] = ["category1","category2","category3","category4","category5","category6","category7","category8"]
     
     var manager: OneShotLocationManager?
-
+    
     var realLocation: CLLocation!
     var expectedCoordinates: CLLocation!
     let notificationManager = LNRNotificationManager()
-
+    
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -43,10 +41,8 @@ class ExploreTableViewController : UITableViewController{
             
         }
         
-             self.tableView.backgroundColor = UIColor(patternImage: UIImage(named: "background")!)
-                
-        createCellHeightsArray()
-
+        self.tableView.backgroundColor = UIColor(patternImage: UIImage(named: "background")!)
+        
         // Get location
         manager = OneShotLocationManager()
         manager!.fetchWithCompletion { location, error in
@@ -64,20 +60,13 @@ class ExploreTableViewController : UITableViewController{
     
     override func viewWillAppear(animated: Bool) {
         navigationItem.title = "Explore"
-        
-//        let appearance = UITabBarItem.appearance()
-//        let attributes = [NSFontAttributeName:UIFont(name: "LemonMilk", size: 20)]
-//        appearance.setTitleTextAttributes(attributes, forState: .Normal)
-        
-
-       
     }
-
+    
     func notificationOnDeal() {
         notificationManager.notificationsPosition = LNRNotificationPosition.Top
         notificationManager.notificationsBodyTextColor = UIColor.darkGrayColor()
         
-        var alertSoundURL: NSURL? = NSBundle.mainBundle().URLForResource("click", withExtension: "wav")
+        let alertSoundURL: NSURL? = NSBundle.mainBundle().URLForResource("click", withExtension: "wav")
         if let _ = alertSoundURL {
             var mySound: SystemSoundID = 0
             AudioServicesCreateSystemSoundID(alertSoundURL!, &mySound)
@@ -94,47 +83,26 @@ class ExploreTableViewController : UITableViewController{
             })
         })
     }
-
-    
-    // MARK: configure
-    func createCellHeightsArray() {
-        for _ in 0...kRowsCount {
-            cellHeights.append(kCloseCellHeight)
-        }
-    }
     
     // MARK: - Table view data source
-    
-    override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 10
+    override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+        // #warning Incomplete implementation, return the number of sections
+        return 1
     }
-    
-    override func tableView(tableView: UITableView, willDisplayCell cell: UITableViewCell, forRowAtIndexPath indexPath: NSIndexPath) {
-        
-        if cell is FoldingCell {
-            let exploreCell = cell as! FoldingCell
-            exploreCell.backgroundColor = UIColor.clearColor()
-            
-            if cellHeights[indexPath.row] == kCloseCellHeight {
-            }
-        }
+    override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        // #warning Incomplete implementation, return the number of rows
+        return categoryArr.count
     }
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("FoldingCell", forIndexPath: indexPath)
-        
-        return cell
+        if let cell = tableView.dequeueReusableCellWithIdentifier("ExploreTableViewCell", forIndexPath: indexPath) as? ExploreTableViewCell {
+            
+            cell.configureCell(categoryArr[indexPath.row], imageIcon: categoryIconArr[indexPath.row], imageBackground: categoryPicBackArr[indexPath.row])
+            
+            return cell
+        } else {
+            return UITableViewCell()
+        }
     }
     
-    override func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
-        return cellHeights[indexPath.row]
-    }
-    
-    // MARK: Table view delegate
-    
-    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        
-        let cell = tableView.cellForRowAtIndexPath(indexPath) as! FoldingCell
-    }
-
 }

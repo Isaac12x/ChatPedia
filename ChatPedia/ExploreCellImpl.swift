@@ -6,17 +6,17 @@
 //  Copyright © 2016 LaunchHackathon. All rights reserved.
 //
 
-
-import UIKit
-
-class ExploreCellImpl: ExploreTableViewCell {
-    
-    override func awakeFromNib() {
-        
-        foregroundView.layer.cornerRadius = 10
-        foregroundView.layer.masksToBounds = true
-        
-        
-        super.awakeFromNib()
-    }
-}
+//
+//import UIKit
+//
+//class ExploreCellImpl: ExploreTableViewCell {
+//    
+//    override func awakeFromNib() {
+//        
+//        foregroundView.layer.cornerRadius = 10
+//        foregroundView.layer.masksToBounds = true
+//        
+//        
+//        super.awakeFromNib()
+//    }
+//}
