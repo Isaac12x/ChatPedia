@@ -13,6 +13,10 @@ class ChatTableViewCell: UITableViewCell {
     
     static let identifier = "ChatCell"
     
+    @IBOutlet weak var titleLabel: UILabel!
+    @IBOutlet weak var messageLabel: UILabel!
+    
+    
     var roomRef: Firebase!
 
     override func awakeFromNib() {

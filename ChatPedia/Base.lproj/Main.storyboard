@@ -3,24 +3,57 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--Chat Groups-->
         <scene sceneID="9vY-mf-xva">
             <objects>
                 <tableViewController storyboardIdentifier="ChatVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="DR9-8n-amm" customClass="ChatTableViewController" customModule="ChatPedia" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="XuL-SW-kTf">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="80" sectionHeaderHeight="28" sectionFooterHeight="28" id="XuL-SW-kTf">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ChatCell" id="qgE-go-VFT" customClass="ChatTableViewCell" customModule="ChatPedia" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="92" width="600" height="44"/>
+                                <rect key="frame" x="0.0" y="92" width="600" height="80"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="qgE-go-VFT" id="QrG-ne-odd">
-                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="79.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0KZ-Qa-xe3">
+                                            <rect key="frame" x="8" y="8" width="584" height="20.5"/>
+                                            <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oz8-eZ-oL8">
+                                            <rect key="frame" x="8" y="37" width="584" height="14.5"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="oz8-eZ-oL8" firstAttribute="leading" secondItem="QrG-ne-odd" secondAttribute="leadingMargin" id="05v-88-cb3"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="oz8-eZ-oL8" secondAttribute="bottom" id="AGF-0v-86m"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="0KZ-Qa-xe3" secondAttribute="trailing" id="IEp-NT-3iz"/>
+                                        <constraint firstItem="0KZ-Qa-xe3" firstAttribute="top" secondItem="QrG-ne-odd" secondAttribute="topMargin" id="Uk7-xA-s9r"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="oz8-eZ-oL8" secondAttribute="trailing" id="VAP-zC-Yb3"/>
+                                        <constraint firstItem="oz8-eZ-oL8" firstAttribute="top" secondItem="0KZ-Qa-xe3" secondAttribute="bottom" constant="8" id="oHK-bX-2ru"/>
+                                        <constraint firstItem="0KZ-Qa-xe3" firstAttribute="leading" secondItem="QrG-ne-odd" secondAttribute="leadingMargin" id="sPt-RC-38K"/>
+                                    </constraints>
+                                    <variation key="default">
+                                        <mask key="constraints">
+                                            <exclude reference="AGF-0v-86m"/>
+                                        </mask>
+                                    </variation>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="messageLabel" destination="oz8-eZ-oL8" id="b8t-hI-4Xf"/>
+                                    <outlet property="titleLabel" destination="0KZ-Qa-xe3" id="Izw-KR-apd"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
