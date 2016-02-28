@@ -32,6 +32,27 @@ class ExploreTableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+<<<<<<< HEAD:ChatPedia/ExploreTableViewController.swift
+=======
+        
+        //firebase login
+        if CurrentUser.sharedInstance.authData == nil {
+            CoreFirebaseData.sharedInstance.ref.authAnonymouslyWithCompletionBlock { (error, authData) -> Void in
+                if let error = error {
+                    print("in \(self.classForCoder) error: \(error.description)")
+                } else if let auth = authData {
+                    CurrentUser.sharedInstance.authData = auth
+                    CurrentUser.sharedInstance.dummyProfileInfo()
+                    
+                }
+            }
+            
+        }
+        
+             self.tableView.backgroundColor = UIColor(patternImage: UIImage(named: "background")!)
+                
+        createCellHeightsArray()
+>>>>>>> de8e19f71ed8564be3036e58b0bd4e05e61211d1:ChatPedia/ExploreTableView.swift
 
         
         // Get location

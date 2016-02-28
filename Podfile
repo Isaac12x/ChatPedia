@@ -5,11 +5,11 @@ use_frameworks!
 
 target 'ChatPedia' do
   pod 'Firebase', '>= 2.5.0'
+  pod 'FirebaseUI/Core', '~> 0.3'
   pod 'JSQMessagesViewController'
   pod 'Eureka', '~> 1.3'
   pod 'EZSwiftExtensions'
   pod 'LNRSimpleNotifications'
-  pod 'TKSwarmAlert'
 end
 
 target 'ChatPediaTests' do

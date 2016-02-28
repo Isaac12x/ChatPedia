@@ -8,19 +8,21 @@
 
 import UIKit
 import Eureka
+import EZSwiftExtensions
 
 class AddDataPicker : FormViewController{
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        navigationController?.pushVC(AddDataPicker())
+        navigationController?.navigationItem.title = "ChatPedia"
+        navigationController?.navigationItem.leftBarButtonItem = UIBarButtonItem(barButtonSystemItem: .Cancel, target: self, action: "cancelViewController")
         
         form.inlineRowHideOptions = InlineRowHideOptions.AnotherInlineRowIsShown.union(.FirstResponderChanges)
         
         
         form
-            +++ Section("Are you staying more days?")
+            +++ Section("What's your last traveling day?")
             
             <<< DateInlineRow() {
                 $0.title = "Pick last day in town"
@@ -29,15 +31,32 @@ class AddDataPicker : FormViewController{
                 
                 self.navigationController?.navigationBar.barTintColor = UIColor.whiteColor()
                 
-                
+        form
+            +++ Section("How many adults are you traveling with?")
+            <<< SegmentedRow<String>(){
+                $0.options = ["1", "2", "3", "4", "+5"]
+                $0.value = "3"
+                }.cellSetup { cell, row in
+                    cell.titleLabel?.text = "Adults: "
+                }
+        form
+            +++ Section("How many kids are you traveling with?")
+            <<< SegmentedRow<String>(){
+                $0.options = ["1", "2", "3", "4", "+5"]
+                $0.value = "3"
+                }.cellSetup { cell, row in
+                    cell.titleLabel?.text = "Kids: "
+                }
+
         }
-        
-        
-        let aaa = UIView(x: 0, y: 0, w: 100, h: 500)
-        aaa.addSubview(self.view)
-        view.addSubview(aaa)
-    }
+      
+        func cancelViewController(){
+            self.dismissVC(completion: nil)
+        }
+    
+    
     
     //func values(includeHidden includeHidden: Bool = false) -> [String: Any?]
     
+    }
 }

@@ -16,7 +16,7 @@ class ChatViewController: JSQMessagesViewController {
     var outgoingBubbleImageView: JSQMessagesBubbleImage!
     var incomingBubbleImageView: JSQMessagesBubbleImage!
     
-    var currentRoomId = "-KBWKykTqc5R3NT4C1qt"  // set Hop-On Hop-Off Bus Tour as default
+//    var currentRoomId = "-KBWKykTqc5R3NT4C1qt"  // set Hop-On Hop-Off Bus Tour as default
     
     // Firebase references.
     var messageRef     : Firebase!
@@ -43,29 +43,26 @@ class ChatViewController: JSQMessagesViewController {
         super.viewDidLoad()
         
         // Firebase
-        roomRef = CoreFirebaseData.sharedInstance.ref.childByAppendingPath("room")
-        messageRef = CoreFirebaseData.sharedInstance.ref.childByAppendingPath("messages")
+//        roomRef = CoreFirebaseData.sharedInstance.ref.childByAppendingPath("room").childByAppendingPath(currentRoomId)
+        messageRef = roomRef.childByAppendingPath("messages")
         
         // Get all rooms
         // TODO: Hook this up later fully.  just print out for now
-        roomRef.observeSingleEventOfType(.Value, withBlock: { snapshot in
-            for room in snapshot.children.allObjects as! [FDataSnapshot] {
-                //print(room.value)
-                self.currentRoomId = room.key
-            }
-        })
-        
-        // Get all chats for the selected room
-        let testRef = messageRef.queryOrderedByChild("roomId").queryEqualToValue("-KBWR2MTrTpJdR1r5Agu")
-        testRef.observeSingleEventOfType(.Value, withBlock: { snapshot in
+//        roomRef.observeSingleEventOfType(.Value, withBlock: { snapshot in
+//            for room in snapshot.children.allObjects as! [FDataSnapshot] {
+//                //print(room.value)
+//                self.currentRoomId = room.key
+//            }
+//        })
+
+        messageRef.observeSingleEventOfType(.Value, withBlock: { snapshot in
             for msg in snapshot.children.allObjects as! [FDataSnapshot] {
                 print(msg.value)
             }
         })
         
         self.senderId = CurrentUser.sharedInstance.authData.uid
-        //self.senderDisplayName = CurrentUser.sharedInstance.displayName
-        self.senderDisplayName = "Jane"
+        self.senderDisplayName = CurrentUser.sharedInstance.displayName
         
         observeTyping()
         
@@ -88,7 +85,7 @@ class ChatViewController: JSQMessagesViewController {
     // MARK: - Firebase
     private func observeMessages() {
         // 1
-        let messagesQuery = messageRef.queryLimitedToLast(25)
+        let messagesQuery = messageRef.queryOrderedByChild("date").queryLimitedToLast(25)
         // 2
         messagesQuery.observeEventType(.ChildAdded) { (snapshot: FDataSnapshot!) in
             // 3
@@ -118,8 +115,8 @@ class ChatViewController: JSQMessagesViewController {
         let messageItem = [ // 2
             "text": text,
             "senderId": senderId,
-            "roomId": currentRoomId,
-            "senderName": senderDisplayName
+            "senderName": senderDisplayName,
+            "date": date.description
         ]
         itemRef.setValue(messageItem) // 3
         
@@ -147,6 +144,16 @@ class ChatViewController: JSQMessagesViewController {
         }
         
         return cell
+    }
+    
+    override func collectionView(collectionView: JSQMessagesCollectionView!, attributedTextForCellTopLabelAtIndexPath indexPath: NSIndexPath!) -> NSAttributedString! {
+        if indexPath.item % 4 == 0 {
+            let message = self.messages[indexPath.item]
+            return JSQMessagesTimestampFormatter.sharedFormatter().attributedTimestampForDate(message.date)
+        }
+        else{
+            return nil;
+        }
     }
     
     override func collectionView(collectionView: JSQMessagesCollectionView!, attributedTextForMessageBubbleTopLabelAtIndexPath indexPath: NSIndexPath!) -> NSAttributedString! {
@@ -198,7 +205,7 @@ class ChatViewController: JSQMessagesViewController {
     }
     
     private func observeTyping() {
-        let typingIndicatorRef = CoreFirebaseData.sharedInstance.ref.childByAppendingPath("typingIndicator")
+        let typingIndicatorRef = roomRef.childByAppendingPath("typingIndicator")
         userIsTypingRef = typingIndicatorRef.childByAppendingPath(senderId)
         userIsTypingRef.onDisconnectRemoveValue()
         

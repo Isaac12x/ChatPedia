@@ -7,17 +7,43 @@
 //
 
 import UIKit
+import FirebaseUI
+import Firebase
 
 class ChatTableViewController: UITableViewController, HandleAuthProtocol {
 
+    var firebaseDataSource: FirebaseTableViewDataSource!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        if CurrentUser.sharedInstance.authData == nil {
+            CoreFirebaseData.sharedInstance.ref.authAnonymouslyWithCompletionBlock { (error, authData) -> Void in
+                if let error = error {
+                    print("in \(self.classForCoder) error: \(error.description)")
+                } else if let auth = authData {
+                    CurrentUser.sharedInstance.authData = auth
+                    CurrentUser.sharedInstance.dummyProfileInfo()
+                    
+                }
+            }
 
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
+        }
 
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem()
+        self.firebaseDataSource = FirebaseTableViewDataSource(ref: CoreFirebaseData.sharedInstance.ref.childByAppendingPath("room"), cellClass: ChatTableViewCell.self, cellReuseIdentifier: ChatTableViewCell.identifier, view: self.tableView)
+        
+        self.firebaseDataSource.populateCellWithBlock { (cell: UITableViewCell, obj: NSObject) -> Void in
+            let snap = obj as! FDataSnapshot
+            print(snap.description)
+            let cell = cell as! ChatTableViewCell
+            
+            // Populate cell as you see fit, like as below
+            cell.textLabel?.text = snap.key as String
+            
+            cell.roomRef = CoreFirebaseData.sharedInstance.ref.childByAppendingPath("room").childByAppendingPath(snap.key)
+        }
+        
+        self.tableView.dataSource = self.firebaseDataSource
     }
     
     override func viewDidAppear(animated: Bool) {
@@ -61,7 +87,9 @@ class ChatTableViewController: UITableViewController, HandleAuthProtocol {
 
 
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        let cell = tableView.cellForRowAtIndexPath(indexPath) as! ChatTableViewCell
         let chatVC = ChatViewController()
+        chatVC.roomRef = cell.roomRef
         chatVC.hidesBottomBarWhenPushed = true
         self.showViewController(chatVC, sender: nil)
     }

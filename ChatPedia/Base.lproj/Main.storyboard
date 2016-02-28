@@ -11,7 +11,7 @@
         </mutableArray>
     </customFonts>
     <scenes>
-        <!--Root View Controller-->
+        <!--Chat Groups-->
         <scene sceneID="9vY-mf-xva">
             <objects>
                 <tableViewController storyboardIdentifier="ChatVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="DR9-8n-amm" customClass="ChatTableViewController" customModule="ChatPedia" customModuleProvider="target" sceneMemberID="viewController">
@@ -34,7 +34,7 @@
                             <outlet property="delegate" destination="DR9-8n-amm" id="A8j-hy-JRg"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Root View Controller" id="bEv-8S-XPa"/>
+                    <navigationItem key="navigationItem" title="Chat Groups" id="bEv-8S-XPa"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5cW-MJ-v6n" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -187,38 +187,6 @@
             </objects>
             <point key="canvasLocation" x="3784" y="-74"/>
         </scene>
-        <!--Deals-->
-        <scene sceneID="q2k-iH-vxM">
-            <objects>
-                <tableViewController storyboardIdentifier="DealsVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="ARc-3M-5WC" customClass="DealsTableview" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="none" showsSelectionImmediatelyOnTouchBegin="NO" rowHeight="667" sectionHeaderHeight="28" sectionFooterHeight="28" id="GRu-Nr-G8N">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="695"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <color key="sectionIndexBackgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                        <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="DealsDayCell" id="VKx-zV-czz">
-                                <rect key="frame" x="0.0" y="92" width="600" height="667"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="VKx-zV-czz" id="Zq5-ea-k1L">
-                                    <rect key="frame" x="0.0" y="0.0" width="600" height="667"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                </tableViewCellContentView>
-                            </tableViewCell>
-                        </prototypes>
-                        <connections>
-                            <outlet property="dataSource" destination="ARc-3M-5WC" id="gsX-T6-32v"/>
-                            <outlet property="delegate" destination="ARc-3M-5WC" id="aO6-fA-nXJ"/>
-                        </connections>
-                    </tableView>
-                    <navigationItem key="navigationItem" title="Deals" id="9Yp-zS-g8f"/>
-                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-                    <size key="freeformSize" width="600" height="695"/>
-                </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="9Re-BU-ggO" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2250" y="-74.5"/>
-        </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="3YV-5x-yBU">
             <objects>
@@ -261,7 +229,6 @@
         <!--EXPLORE-->
         <scene sceneID="zg7-IM-NpX">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Erc-hp-QVn" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Dwu-YD-cSH" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="EXPLORE" image="explore_icon" id="gB5-ra-BF2">
                         <userDefinedRuntimeAttributes>
@@ -289,6 +256,7 @@
                         <segue destination="YWf-CS-L4m" kind="relationship" relationship="rootViewController" id="JaU-05-yeG"/>
                     </connections>
                 </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Erc-hp-QVn" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1438" y="-860"/>
         </scene>
@@ -315,12 +283,12 @@
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="ARc-3M-5WC" kind="relationship" relationship="rootViewController" id="2a0-X6-xcq"/>
+                        <segue destination="LRW-oX-RVn" kind="relationship" relationship="rootViewController" id="DzS-RP-56V"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uuU-wQ-TzX" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1438" y="-75"/>
+            <point key="canvasLocation" x="1443" y="-74"/>
         </scene>
         <!--FAVORITES-->
         <scene sceneID="hMZ-Sz-hTI">
@@ -419,6 +387,98 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lKj-cH-yHC" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2250" y="-860"/>
+        </scene>
+        <!--Deals Table View-->
+        <scene sceneID="DNT-Xd-PDv">
+            <objects>
+                <tableViewController storyboardIdentifier="DealsVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="LRW-oX-RVn" customClass="DealsTableView" customModule="ChatPedia" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="none" showsSelectionImmediatelyOnTouchBegin="NO" rowHeight="667" sectionHeaderHeight="28" sectionFooterHeight="28" id="bMI-Cl-occ">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="695"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="sectionIndexBackgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="FoldingCell" rowHeight="667" id="zM7-WJ-RKJ" customClass="DemoCell" customModule="ChatPedia" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="92" width="600" height="667"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="zM7-WJ-RKJ" id="9Ce-nd-sJz">
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="667"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="818-DE-cq8" userLabel="Foreground" customClass="RotatedView" customModule="ChatPedia" customModuleProvider="target">
+                                            <rect key="frame" x="20" y="7" width="560" height="165"/>
+                                            <subviews>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="olg-vg-bvs" userLabel="LeftView">
+                                                    <rect key="frame" x="0.0" y="0.0" width="88" height="165"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="th9-aj-Cih">
+                                                            <rect key="frame" x="13" y="53" width="57" height="45"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                                            <color key="textColor" red="0.99889823720000004" green="0.99889823720000004" blue="0.99889823720000004" alpha="1" colorSpace="calibratedRGB"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                    <color key="backgroundColor" red="0.36470588240000001" green="0.2901960784" blue="0.59999999999999998" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="88" id="RCo-f3-lzc"/>
+                                                    </constraints>
+                                                </view>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Hyo-8S-aMB" userLabel="line">
+                                                    <rect key="frame" x="120" y="52" width="424" height="1"/>
+                                                    <color key="backgroundColor" red="0.87843137250000003" green="0.87843137250000003" blue="0.87843137250000003" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="1" id="7Du-3j-RJX"/>
+                                                    </constraints>
+                                                </view>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="arrow" translatesAutoresizingMaskIntoConstraints="NO" id="3nl-Cw-9Fr">
+                                                    <rect key="frame" x="519" y="78" width="25" height="43"/>
+                                                </imageView>
+                                            </subviews>
+                                            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="165" id="DeF-5I-onh"/>
+                                                <constraint firstAttribute="bottom" secondItem="olg-vg-bvs" secondAttribute="bottom" id="Fm2-6L-ln8"/>
+                                                <constraint firstAttribute="trailing" secondItem="Hyo-8S-aMB" secondAttribute="trailing" constant="16" id="SdF-Ma-lk1"/>
+                                                <constraint firstItem="Hyo-8S-aMB" firstAttribute="leading" secondItem="818-DE-cq8" secondAttribute="leading" constant="120" id="Zv4-oZ-p6b"/>
+                                                <constraint firstItem="olg-vg-bvs" firstAttribute="top" secondItem="818-DE-cq8" secondAttribute="top" id="aaf-UZ-FAi"/>
+                                                <constraint firstItem="Hyo-8S-aMB" firstAttribute="top" secondItem="818-DE-cq8" secondAttribute="top" constant="52" id="lM4-ck-bsz"/>
+                                                <constraint firstItem="olg-vg-bvs" firstAttribute="leading" secondItem="818-DE-cq8" secondAttribute="leading" id="nRJ-L6-JHf"/>
+                                            </constraints>
+                                        </view>
+                                    </subviews>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                    <constraints>
+                                        <constraint firstAttribute="trailing" secondItem="818-DE-cq8" secondAttribute="trailing" constant="20" id="Auf-XI-b19"/>
+                                        <constraint firstItem="818-DE-cq8" firstAttribute="top" secondItem="9Ce-nd-sJz" secondAttribute="top" constant="7" identifier="ForegroundViewTop" id="WlB-aN-h6T"/>
+                                        <constraint firstItem="818-DE-cq8" firstAttribute="leading" secondItem="9Ce-nd-sJz" secondAttribute="leading" constant="20" id="Z3u-YU-dyC"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <color key="backgroundColor" red="0.91372549020000005" green="0.85277035359999998" blue="0.26274509800000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="backViewColor">
+                                        <color key="value" red="0.96862745100000003" green="0.93725490199999995" blue="0.96862745100000003" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="itemCount">
+                                        <integer key="value" value="4"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <outlet property="foregroundView" destination="818-DE-cq8" id="IVF-mC-bkC"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="LRW-oX-RVn" id="BMH-Zt-8tj"/>
+                            <outlet property="delegate" destination="LRW-oX-RVn" id="T66-xa-dCF"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="frU-jc-vfl"/>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="600" height="695"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="CAh-re-jYt" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2233" y="-74.5"/>
         </scene>
     </scenes>
     <resources>
