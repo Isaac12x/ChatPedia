@@ -92,9 +92,18 @@ class ChatViewController: JSQMessagesViewController {
             let id = snapshot.value["senderId"] as! String
             let text = snapshot.value["text"] as! String
             let senderName = snapshot.value["senderName"] as! String
+            let dateStr = snapshot.value["date"] as! String
+            
+            var dateFormatter = NSDateFormatter()
+            dateFormatter.timeZone = NSTimeZone.systemTimeZone()
+            dateFormatter.locale = NSLocale.currentLocale()
+            dateFormatter.dateFormat = "yyyy-MM-dd hh:mm:ss Z"
+            dateFormatter.formatterBehavior = NSDateFormatterBehavior.BehaviorDefault
+            
+            let date = dateFormatter.dateFromString(dateStr)
             
             // 4
-            self.addMessage(id, text: text, senderName: senderName)
+            self.addMessage(id, text: text, senderName: senderName, date: date!)
             
             // 5
             self.finishReceivingMessage()
@@ -102,8 +111,8 @@ class ChatViewController: JSQMessagesViewController {
     }
     
     // MARK: - Receiving Messages
-    func addMessage(id: String, text: String, senderName: String) {
-        let message = JSQMessage(senderId: id, displayName: senderName, text: text)
+    func addMessage(id: String, text: String, senderName: String, date: NSDate) {
+        let message = JSQMessage(senderId: id, senderDisplayName: senderName, date: date, text: text)
         messages.append(message)
     }
     
@@ -119,7 +128,7 @@ class ChatViewController: JSQMessagesViewController {
             "date": date.description
         ]
         itemRef.setValue(messageItem) // 3
-        
+
         // 4
         JSQSystemSoundPlayer.jsq_playMessageSentSound()
         
@@ -147,8 +156,10 @@ class ChatViewController: JSQMessagesViewController {
     }
     
     override func collectionView(collectionView: JSQMessagesCollectionView!, attributedTextForCellTopLabelAtIndexPath indexPath: NSIndexPath!) -> NSAttributedString! {
-        if indexPath.item % 4 == 0 {
+        print(indexPath.item)
+        if indexPath.item % 3 == 0 {
             let message = self.messages[indexPath.item]
+            print(message.date)
             return JSQMessagesTimestampFormatter.sharedFormatter().attributedTimestampForDate(message.date)
         }
         else{
@@ -170,6 +181,14 @@ class ChatViewController: JSQMessagesViewController {
             return 0.0
         }
         return kJSQMessagesCollectionViewCellLabelHeightDefault
+    }
+    
+    override func collectionView(collectionView: JSQMessagesCollectionView!, layout collectionViewLayout: JSQMessagesCollectionViewFlowLayout!, heightForCellTopLabelAtIndexPath indexPath: NSIndexPath!) -> CGFloat {
+        if indexPath.item % 3 == 0 {
+            return kJSQMessagesCollectionViewCellLabelHeightDefault
+        }
+        
+        return 0.0
     }
     
     override func collectionView(collectionView: JSQMessagesCollectionView!,
