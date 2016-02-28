@@ -39,6 +39,8 @@ class ChatViewController: JSQMessagesViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        // hack so it wont crash until we pass a room
+        roomRef = CoreFirebaseData.sharedInstance.ref
         
         // Firebase
         messageRef = roomRef.childByAppendingPath("messages")

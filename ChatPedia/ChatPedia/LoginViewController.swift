@@ -26,11 +26,14 @@ class LoginViewController: UIViewController {
                 
             }
         }
+        
     }
     
     // MARK: - Load
     override func viewDidLoad() {
         super.viewDidLoad()
+
+
     }
 
     override func didReceiveMemoryWarning() {

@@ -5,7 +5,10 @@ use_frameworks!
 
 target 'ChatPedia' do
   pod 'Firebase'
+  pod 'FirebaseUI/Password', '~> 0.3.2'
+  pod 'FirebaseUI/Core', '~> 0.3'
   pod 'JSQMessagesViewController'
+
 end
 
 target 'ChatPediaTests' do
