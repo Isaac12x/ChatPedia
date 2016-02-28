@@ -43,23 +43,7 @@ class ChatViewController: JSQMessagesViewController {
         super.viewDidLoad()
         
         // Firebase
-//        roomRef = CoreFirebaseData.sharedInstance.ref.childByAppendingPath("room").childByAppendingPath(currentRoomId)
         messageRef = roomRef.childByAppendingPath("messages")
-        
-        // Get all rooms
-        // TODO: Hook this up later fully.  just print out for now
-//        roomRef.observeSingleEventOfType(.Value, withBlock: { snapshot in
-//            for room in snapshot.children.allObjects as! [FDataSnapshot] {
-//                //print(room.value)
-//                self.currentRoomId = room.key
-//            }
-//        })
-
-        messageRef.observeSingleEventOfType(.Value, withBlock: { snapshot in
-            for msg in snapshot.children.allObjects as! [FDataSnapshot] {
-                print(msg.value)
-            }
-        })
         
         self.senderId = CurrentUser.sharedInstance.authData.uid
         self.senderDisplayName = CurrentUser.sharedInstance.displayName
@@ -92,9 +76,22 @@ class ChatViewController: JSQMessagesViewController {
             let id = snapshot.value["senderId"] as! String
             let text = snapshot.value["text"] as! String
             let senderName = snapshot.value["senderName"] as! String
+            let dateStr = snapshot.value["date"] as! String
             
+            let dateFormatter = NSDateFormatter()
+            dateFormatter.timeZone = NSTimeZone.systemTimeZone()
+            dateFormatter.locale = NSLocale.currentLocale()
+            dateFormatter.dateFormat = "yyyy-MM-dd hh:mm:ss Z"
+            dateFormatter.formatterBehavior = NSDateFormatterBehavior.BehaviorDefault
+            
+            if let date = dateFormatter.dateFromString(dateStr) {
+                self.addMessage(id, text: text, senderName: senderName, date: date)
+
+            } else {
+                self.addMessage(id, text: text, senderName: senderName, date: NSDate())
+            }
+
             // 4
-            self.addMessage(id, text: text, senderName: senderName)
             
             // 5
             self.finishReceivingMessage()
@@ -102,8 +99,8 @@ class ChatViewController: JSQMessagesViewController {
     }
     
     // MARK: - Receiving Messages
-    func addMessage(id: String, text: String, senderName: String) {
-        let message = JSQMessage(senderId: id, displayName: senderName, text: text)
+    func addMessage(id: String, text: String, senderName: String, date: NSDate) {
+        let message = JSQMessage(senderId: id, senderDisplayName: senderName, date: date, text: text)
         messages.append(message)
     }
     
@@ -119,7 +116,7 @@ class ChatViewController: JSQMessagesViewController {
             "date": date.description
         ]
         itemRef.setValue(messageItem) // 3
-        
+
         // 4
         JSQSystemSoundPlayer.jsq_playMessageSentSound()
         
@@ -147,8 +144,9 @@ class ChatViewController: JSQMessagesViewController {
     }
     
     override func collectionView(collectionView: JSQMessagesCollectionView!, attributedTextForCellTopLabelAtIndexPath indexPath: NSIndexPath!) -> NSAttributedString! {
-        if indexPath.item % 4 == 0 {
+        if indexPath.item % 3 == 0 {
             let message = self.messages[indexPath.item]
+
             return JSQMessagesTimestampFormatter.sharedFormatter().attributedTimestampForDate(message.date)
         }
         else{
@@ -170,6 +168,14 @@ class ChatViewController: JSQMessagesViewController {
             return 0.0
         }
         return kJSQMessagesCollectionViewCellLabelHeightDefault
+    }
+    
+    override func collectionView(collectionView: JSQMessagesCollectionView!, layout collectionViewLayout: JSQMessagesCollectionViewFlowLayout!, heightForCellTopLabelAtIndexPath indexPath: NSIndexPath!) -> CGFloat {
+        if indexPath.item % 3 == 0 {
+            return kJSQMessagesCollectionViewCellLabelHeightDefault
+        }
+        
+        return 0.0
     }
     
     override func collectionView(collectionView: JSQMessagesCollectionView!,
