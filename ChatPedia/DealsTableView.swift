@@ -70,8 +70,8 @@ class DealsTableView: UIViewController {
         }
 
         
-        toURL.alpha = 0.9
-        updateView.alpha = 0.9
+        toURL.alpha = 0.1
+        updateView.alpha = 0.1
         
     }
     
