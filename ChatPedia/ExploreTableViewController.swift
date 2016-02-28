@@ -121,6 +121,18 @@ class ExploreTableViewController: UITableViewController {
             return UITableViewCell()
         }
     }
-
+    
+    let detailSegueIdentifier = "exploreDetailTableSegue"
+    
+    // MARK: - Navigation
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == detailSegueIdentifier {
+            if let destination = segue.destinationViewController as? ExploreDetailTableViewController {
+//                if let blogIndex = tableView.indexPathForSelectedRow()?.row {
+//                    destination.blogName = swiftBlogs[blogIndex]
+//                }
+            }
+        }
+    }
    
 }

@@ -10,6 +10,8 @@
 		C08745FC9E943C13AA2262DE /* Pods_ChatPedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 00E15C9177AACB7F1616434E /* Pods_ChatPedia.framework */; };
 		C34F577A1C8161BA001B7D9F /* Utilities.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C34F57791C8161BA001B7D9F /* Utilities.storyboard */; };
 		C3D893E11C828DCF00D0A296 /* SweetAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3D893E01C828DCF00D0A296 /* SweetAlert.swift */; };
+		D44B859D1C8348B700A793B1 /* ExplorerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D44B859C1C8348B700A793B1 /* ExplorerModel.swift */; };
+		D44B859F1C838E5600A793B1 /* DetailData.swift in Sources */ = {isa = PBXBuildFile; fileRef = D44B859E1C838E5600A793B1 /* DetailData.swift */; };
 		D48703091C81ACB100E4775E /* LemonMilk.otf in Resources */ = {isa = PBXBuildFile; fileRef = D48703081C81ACB100E4775E /* LemonMilk.otf */; };
 		D487030B1C81ACBC00E4775E /* CaviarDreams.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D487030A1C81ACBC00E4775E /* CaviarDreams.ttf */; };
 		D487030E1C82457800E4775E /* FavoritesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D487030D1C82457800E4775E /* FavoritesTableViewController.swift */; };
@@ -60,6 +62,8 @@
 		6C02DE0493397C695909F9AE /* Pods-ChatPedia.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ChatPedia.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ChatPedia/Pods-ChatPedia.debug.xcconfig"; sourceTree = "<group>"; };
 		C34F57791C8161BA001B7D9F /* Utilities.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Utilities.storyboard; sourceTree = "<group>"; };
 		C3D893E01C828DCF00D0A296 /* SweetAlert.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SweetAlert.swift; sourceTree = "<group>"; };
+		D44B859C1C8348B700A793B1 /* ExplorerModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExplorerModel.swift; sourceTree = "<group>"; };
+		D44B859E1C838E5600A793B1 /* DetailData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailData.swift; sourceTree = "<group>"; };
 		D48703081C81ACB100E4775E /* LemonMilk.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = LemonMilk.otf; sourceTree = "<group>"; };
 		D487030A1C81ACBC00E4775E /* CaviarDreams.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = CaviarDreams.ttf; sourceTree = "<group>"; };
 		D487030C1C81ACC500E4775E /* CaviarDreams_Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = CaviarDreams_Bold.ttf; sourceTree = "<group>"; };
@@ -243,8 +247,10 @@
 				ECDBA47F1C833DF6007F9E74 /* ExploreTableViewController.swift */,
 				ECDBA4801C833DF6007F9E74 /* ExploreTableViewCell.swift */,
 				ECDBA4811C833DF6007F9E74 /* ExploreDetailTableViewController.swift */,
+				D44B859E1C838E5600A793B1 /* DetailData.swift */,
 				ECDBA4821C833DF6007F9E74 /* ExploreDetailTableViewCell.swift */,
 				ECDBA4831C833DF6007F9E74 /* DetailTripVC.swift */,
+				D44B859C1C8348B700A793B1 /* ExplorerModel.swift */,
 			);
 			name = Explore;
 			sourceTree = "<group>";
@@ -431,11 +437,13 @@
 				ECA8149F1C83063200DEB9D8 /* GlobalEnums.swift in Sources */,
 				C3D893E11C828DCF00D0A296 /* SweetAlert.swift in Sources */,
 				ECDBA4841C833DF6007F9E74 /* ExploreTableViewController.swift in Sources */,
+				D44B859D1C8348B700A793B1 /* ExplorerModel.swift in Sources */,
 				D48703101C82463400E4775E /* FavoritesTableViewCell.swift in Sources */,
 				EC81FAB51C8198AE00CDA20B /* FoldingCell.swift in Sources */,
 				D487030E1C82457800E4775E /* FavoritesTableViewController.swift in Sources */,
 				ECA814A41C83063200DEB9D8 /* ChatViewController.swift in Sources */,
 				EC81FAB61C8198AE00CDA20B /* TableViewBase.swift in Sources */,
+				D44B859F1C838E5600A793B1 /* DetailData.swift in Sources */,
 				ECDBA4851C833DF6007F9E74 /* ExploreTableViewCell.swift in Sources */,
 				ECA814A11C83063200DEB9D8 /* ChatTableViewController.swift in Sources */,
 				ECA814391C81CF4700DEB9D8 /* OneShotLocationManager.swift in Sources */,

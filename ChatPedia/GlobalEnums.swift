@@ -11,4 +11,6 @@ import Foundation
 enum StoryboardID: String {
     case Login = "Login"
     case Utilities = "Utilities"
+    case Main = "Main"
+    case Chat = "ChatVC"
 }

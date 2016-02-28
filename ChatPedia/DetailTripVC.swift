@@ -7,8 +7,9 @@
 //
 
 import UIKit
+import Firebase
 
-class DetailTripVC: UITableViewController {
+class DetailTripVC: UIViewController {
     
     @IBOutlet weak var currentPrice: UILabel!
     @IBOutlet weak var tripTopImage: UIImageView!
@@ -20,6 +21,10 @@ class DetailTripVC: UITableViewController {
     @IBOutlet weak var childCostLabel: UILabel!
     @IBOutlet weak var tripDateLabel: UILabel!
     @IBOutlet weak var buttonChat: UIButton!
+    
+    var stuff: DetailData!
+    var roomRef: Firebase?
+
     
     //note tripTop Image will be a blur image of the attraction
     //tripBottom Image will be a blur image as well.
@@ -40,14 +45,14 @@ class DetailTripVC: UITableViewController {
     
     func updateUI() {
         
-        self.currentPrice.text = ""
-        self.tripTopImage.image = UIImage(named: "")
-        self.tripBottomImage.image = UIImage(named: "")
-        self.durationLabel.text = ""
-        self.descriptionLabel.text = ""
-        self.adultCostLabel.text = ""
-        self.childCostLabel.text = ""
-        self.tripDateLabel.text = ""
+//        self.currentPrice.text = stuff.priceToPass
+//        self.tripTopImage.image = UIImage(named: "\(stuff.thumbnail)")
+//        self.tripBottomImage.image = UIImage(named: "\(stuff.thumbnail)")
+//        self.durationLabel.text = stuff.durationToPass
+//        self.descriptionLabel.text = ""
+//        self.adultCostLabel.text = stuff.adultCostToPass
+//        self.childCostLabel.text = stuff.childCostToPass
+//        self.tripDateLabel.text = stuff.tripDateToPass
         
     }
 
@@ -55,6 +60,15 @@ class DetailTripVC: UITableViewController {
 
     @IBAction func jumpToChatGroupButton(sender: AnyObject) {
         
+        let chatVC  = ChatViewController()
+        if let ref = self.roomRef {
+            chatVC.roomRef = ref
+            chatVC.hidesBottomBarWhenPushed = true
+            self.showViewController(chatVC, sender: nil)
+        } else {
+            
+        }
+
         
     }
 }

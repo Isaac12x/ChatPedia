@@ -1,44 +1,30 @@
 {
-  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "FDCA9A15464573443D8EF3965A540ACAA18BBA9B+++822B90A",
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "4A772F0DC52AAC86EE596B3C35170B571FE8A91B+++15DAEBD",
   "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
 
   },
   "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
-    "FDCA9A15464573443D8EF3965A540ACAA18BBA9B+++822B90A" : 0,
-    "FDCA9A15464573443D8EF3965A540ACAA18BBA9B+++B32A403" : 0,
-    "FDCA9A15464573443D8EF3965A540ACAA18BBA9B+++62BF148" : 0,
-    "FDCA9A15464573443D8EF3965A540ACAA18BBA9B+++6548DFC" : 0
+    "4A772F0DC52AAC86EE596B3C35170B571FE8A91B+++15DAEBD" : 0,
+    "FDCA9A15464573443D8EF3965A540ACAA18BBA9B+++F07A805" : 0
   },
   "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "14D76A48-303D-4D36-9387-8CED89535245",
   "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
-    "FDCA9A15464573443D8EF3965A540ACAA18BBA9B+++822B90A" : "xpedia\/",
-    "FDCA9A15464573443D8EF3965A540ACAA18BBA9B+++B32A403" : "",
-    "FDCA9A15464573443D8EF3965A540ACAA18BBA9B+++62BF148" : "ChatPedia\/",
-    "FDCA9A15464573443D8EF3965A540ACAA18BBA9B+++6548DFC" : ""
+    "4A772F0DC52AAC86EE596B3C35170B571FE8A91B+++15DAEBD" : "ChatPedia\/",
+    "FDCA9A15464573443D8EF3965A540ACAA18BBA9B+++F07A805" : ""
   },
   "DVTSourceControlWorkspaceBlueprintNameKey" : "ChatPedia",
   "DVTSourceControlWorkspaceBlueprintVersion" : 204,
-  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "ChatPedia\/ChatPedia.xcworkspace",
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "ChatPedia.xcworkspace",
   "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
     {
       "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/Isaac12x\/ChatPedia.git",
       "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
-      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "FDCA9A15464573443D8EF3965A540ACAA18BBA9B+++62BF148"
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "4A772F0DC52AAC86EE596B3C35170B571FE8A91B+++15DAEBD"
     },
     {
-      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/Isaac12x\/ChatPedia.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/www.github.com\/isaac12x\/ChatPedia",
       "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
-      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "FDCA9A15464573443D8EF3965A540ACAA18BBA9B+++6548DFC"
-    },
-    {
-      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/Isaac12x\/ChatPedia.git",
-      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
-      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "FDCA9A15464573443D8EF3965A540ACAA18BBA9B+++822B90A"
-    },
-    {
-      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/Isaac12x\/ChatPedia.git",
-      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
-      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "FDCA9A15464573443D8EF3965A540ACAA18BBA9B+++B32A403"
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "FDCA9A15464573443D8EF3965A540ACAA18BBA9B+++F07A805"
     }
   ]
 }

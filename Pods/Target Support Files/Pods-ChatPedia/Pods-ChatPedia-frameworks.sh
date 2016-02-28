@@ -84,6 +84,7 @@ strip_invalid_archs() {
 
 
 if [[ "$CONFIGURATION" == "Debug" ]]; then
+  install_framework "Pods-ChatPedia/Alamofire.framework"
   install_framework "Pods-ChatPedia/EZSwiftExtensions.framework"
   install_framework "Pods-ChatPedia/Eureka.framework"
   install_framework "Pods-ChatPedia/Firebase.framework"
@@ -93,6 +94,7 @@ if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_framework "Pods-ChatPedia/LNRSimpleNotifications.framework"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
+  install_framework "Pods-ChatPedia/Alamofire.framework"
   install_framework "Pods-ChatPedia/EZSwiftExtensions.framework"
   install_framework "Pods-ChatPedia/Eureka.framework"
   install_framework "Pods-ChatPedia/Firebase.framework"
