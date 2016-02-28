@@ -26,6 +26,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             NSForegroundColorAttributeName: UIColor.whiteColor()
         ]
         
+        
         let navigationColor = colorWithHexString("#E23928")
         
         
