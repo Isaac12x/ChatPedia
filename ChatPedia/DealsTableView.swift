@@ -33,14 +33,18 @@ class DealsTableView: UITableViewController {
 
         createCellHeightsArray()
         
-        self.navigationController?.navigationBar.barTintColor = UIColor.whiteColor()
-        self.tableView.backgroundColor = UIColor(patternImage: UIImage(named: "background")!)
+          self.tableView.backgroundColor = UIColor(patternImage: UIImage(named: "background")!)
         
         self.tabBarController!.tabBar.barTintColor = UIColor.blueColor()
         self.tabBarController!.tabBar.tintColor = UIColor.whiteColor()
         
         self.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Not in SF?", style: .Plain, target: "AddDatePicker", action: "performSegue:")
     
+    }
+    
+    override func viewWillAppear(animated: Bool) {
+        navigationItem.title = "Deals"
+
     }
     
     
@@ -54,6 +58,8 @@ class DealsTableView: UITableViewController {
             cellHeights.append(kCloseCellHeight)
         }
     }
+    
+    
     
     // MARK: - Table view data source
     

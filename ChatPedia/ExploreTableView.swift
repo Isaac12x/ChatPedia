@@ -29,8 +29,7 @@ class ExploreTableView : UITableViewController{
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.navigationController?.navigationBar.barTintColor = UIColor.whiteColor()
-        self.tableView.backgroundColor = UIColor(patternImage: UIImage(named: "background")!)
+             self.tableView.backgroundColor = UIColor(patternImage: UIImage(named: "background")!)
                 
         createCellHeightsArray()
 
@@ -49,7 +48,17 @@ class ExploreTableView : UITableViewController{
         self.notificationOnDeal()
     }
     
-    
+    override func viewWillAppear(animated: Bool) {
+        navigationItem.title = "Explore"
+        
+//        let appearance = UITabBarItem.appearance()
+//        let attributes = [NSFontAttributeName:UIFont(name: "LemonMilk", size: 20)]
+//        appearance.setTitleTextAttributes(attributes, forState: .Normal)
+        
+
+       
+    }
+
     func notificationOnDeal() {
         notificationManager.notificationsPosition = LNRNotificationPosition.Top
         notificationManager.notificationsBodyTextColor = UIColor.darkGrayColor()
@@ -107,12 +116,11 @@ class ExploreTableView : UITableViewController{
         return cellHeights[indexPath.row]
     }
     
-    // MARK: Table vie delegate
+    // MARK: Table view delegate
     
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         
         let cell = tableView.cellForRowAtIndexPath(indexPath) as! FoldingCell
-        
     }
 
 }

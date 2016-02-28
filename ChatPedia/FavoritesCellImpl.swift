@@ -10,13 +10,13 @@ import UIKit
 
 class FavoritesCellImpl: FavoritesTableViewCell {
 
-//    override func awakeFromNib() {
-//        
-//        foregroundView.layer.cornerRadius = 10
-//        foregroundView.layer.masksToBounds = true
-//        
-//        
-//        super.awakeFromNib()
-//    }
+    override func awakeFromNib() {
+        
+        foregroundView.layer.cornerRadius = 10
+        foregroundView.layer.masksToBounds = true
+        
+        
+        super.awakeFromNib()
+    }
 
 }

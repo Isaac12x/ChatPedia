@@ -38,11 +38,17 @@
         <scene sceneID="anN-uN-8QD">
             <objects>
                 <navigationController useStoryboardIdentifierAsRestorationIdentifier="YES" id="w5Z-Gy-C9Z" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="CHAT" image="chat_icon" id="Xgg-M4-dQd"/>
+                    <tabBarItem key="tabBarItem" title="CHAT" image="chat_icon" id="Xgg-M4-dQd">
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="color" keyPath="tintColor">
+                                <color key="value" red="0.8862745098" green="0.22352941179999999" blue="0.15686274510000001" alpha="1" colorSpace="calibratedRGB"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </tabBarItem>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="mpS-KA-vyB">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="barTintColor" red="0.98039215690000003" green="0.066666666669999999" blue="0.30980392159999998" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="barTintColor" red="0.8862745098" green="0.22352941179999999" blue="0.15686274510000001" alpha="1" colorSpace="calibratedRGB"/>
                     </navigationBar>
                     <connections>
                         <segue destination="DR9-8n-amm" kind="relationship" relationship="rootViewController" id="w2V-y9-Zfo"/>
@@ -52,7 +58,7 @@
             </objects>
             <point key="canvasLocation" x="723" y="923"/>
         </scene>
-        <!--Table View Base-->
+        <!--Favorites-->
         <scene sceneID="k0Y-hJ-2iX">
             <objects>
                 <tableViewController storyboardIdentifier="FavoritesVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="z0f-oG-LgE" customClass="TableViewBase" customModule="ChatPedia" customModuleProvider="target" sceneMemberID="viewController">
@@ -136,13 +142,13 @@
                             <outlet property="delegate" destination="z0f-oG-LgE" id="Pl7-dN-Cac"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="r2y-nT-Ntl"/>
+                    <navigationItem key="navigationItem" title="Favorites" id="r2y-nT-Ntl"/>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="600" height="695"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="L8H-pc-OYK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2250" y="704.5"/>
+            <point key="canvasLocation" x="2233" y="752.5"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="9lf-48-vny">
@@ -175,7 +181,7 @@
             </objects>
             <point key="canvasLocation" x="3784" y="-74"/>
         </scene>
-        <!--Deals Tableview-->
+        <!--Deals-->
         <scene sceneID="q2k-iH-vxM">
             <objects>
                 <tableViewController storyboardIdentifier="DealsVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="ARc-3M-5WC" customClass="DealsTableview" sceneMemberID="viewController">
@@ -199,7 +205,7 @@
                             <outlet property="delegate" destination="ARc-3M-5WC" id="aO6-fA-nXJ"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="9Yp-zS-g8f"/>
+                    <navigationItem key="navigationItem" title="Deals" id="9Yp-zS-g8f"/>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="600" height="695"/>
                 </tableViewController>
@@ -215,7 +221,7 @@
                     <tabBar key="tabBar" contentMode="scaleToFill" id="DZb-3J-jqm">
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                        <color key="barTintColor" red="0.98039215690000003" green="0.066666666669999999" blue="0.30980392159999998" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="barTintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </tabBar>
                     <connections>
                         <segue destination="Dwu-YD-cSH" kind="relationship" relationship="viewControllers" id="8hK-s0-rmX"/>
@@ -250,12 +256,26 @@
         <scene sceneID="zg7-IM-NpX">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Dwu-YD-cSH" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="EXPLORE" image="explore_icon" id="gB5-ra-BF2"/>
+                    <tabBarItem key="tabBarItem" title="EXPLORE" image="explore_icon" id="gB5-ra-BF2">
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="color" keyPath="tintColor">
+                                <color key="value" red="0.8862745098" green="0.22352941179999999" blue="0.15686274510000001" alpha="1" colorSpace="calibratedRGB"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="string" keyPath="fontName" value="LemonMilk"/>
+                        </userDefinedRuntimeAttributes>
+                    </tabBarItem>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="1S5-Lo-bLE">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="barTintColor" red="0.98039215690000003" green="0.066666666669999999" blue="0.30980392159999998" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="barTintColor" red="0.8862745098" green="0.22352941179999999" blue="0.15686274510000001" alpha="1" colorSpace="calibratedRGB"/>
+                        <textAttributes key="titleTextAttributes">
+                            <fontDescription key="fontDescription" name="CaviarDreams" family="Caviar Dreams" pointSize="40"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        </textAttributes>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="string" keyPath="keyPath" value="LemonMilk"/>
+                        </userDefinedRuntimeAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
@@ -270,12 +290,22 @@
         <scene sceneID="oKk-B8-dq4">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="fn7-sM-F8T" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="DEALS" image="deals_icon" id="RnF-nL-aTe"/>
+                    <tabBarItem key="tabBarItem" title="DEALS" image="deals_icon" id="RnF-nL-aTe">
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="color" keyPath="tintColor">
+                                <color key="value" red="0.8862745098" green="0.22352941179999999" blue="0.15686274510000001" alpha="1" colorSpace="calibratedRGB"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </tabBarItem>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="iqU-n9-QlP">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="barTintColor" red="0.98039215690000003" green="0.066666666669999999" blue="0.30980392159999998" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="barTintColor" red="0.8862745098" green="0.22352941179999999" blue="0.15686274510000001" alpha="1" colorSpace="calibratedRGB"/>
+                        <textAttributes key="titleTextAttributes">
+                            <fontDescription key="fontDescription" name="LemonMilk" family="Lemon/Milk" pointSize="20"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        </textAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
@@ -290,14 +320,25 @@
         <scene sceneID="hMZ-Sz-hTI">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="bLr-S9-7GX" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="FAVORITES" image="heart_icon" id="q6n-eA-QsY"/>
+                    <tabBarItem key="tabBarItem" title="FAVORITES" image="heart_icon" id="q6n-eA-QsY">
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="color" keyPath="tintColor">
+                                <color key="value" red="0.8862745098" green="0.22352941179999999" blue="0.15686274510000001" alpha="1" colorSpace="calibratedRGB"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </tabBarItem>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="YYf-OA-1pS">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="barTintColor" red="0.98039215690000003" green="0.066666666669999999" blue="0.30980392159999998" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="barTintColor" red="0.8862745098" green="0.22352941179999999" blue="0.15686274510000001" alpha="1" colorSpace="calibratedRGB"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="color" keyPath="tintColor">
+                            <color key="value" red="0.67843137249999996" green="0.1215686275" blue="0.14901960780000001" alpha="1" colorSpace="calibratedRGB"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
                     <connections>
                         <segue destination="z0f-oG-LgE" kind="relationship" relationship="rootViewController" id="lfz-88-Svo"/>
                     </connections>
@@ -396,7 +437,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RfN-eR-0Dl" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2258" y="-860.5"/>
+            <point key="canvasLocation" x="2255" y="-853.5"/>
         </scene>
     </scenes>
     <resources>
