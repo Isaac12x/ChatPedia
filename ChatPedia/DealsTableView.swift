@@ -8,18 +8,26 @@
 
 import UIKit
 import MapKit
-
+import LNRSimpleNotifications
+import AudioToolbox
 
 class DealsTableView: UITableViewController {
     
-    let kCloseCellHeight: CGFloat = 488
+    let kCloseCellHeight: CGFloat = 1200
     let kRowsCount = 1
     var cellHeights = [CGFloat]()
     var url = NSBundle.mainBundle().pathForResource("DealLocations", ofType: "json")
     var deepLink: String!
-    var sharedSession: NSURLSession!
+    var session: NSURLSession!
     
-    typealias CompletionHandler = (result: AnyObject!, error: ErrorType?) -> Void
+    var priceFromApi: [AnyObject]!
+    var goToLink: [AnyObject]!
+    
+    var tasksDidEnd = 3
+    
+    let linearBar: LinearProgressBar = LinearProgressBar()
+    
+    typealias CompletionHandler = (success: Bool, error: ErrorType?) -> Void
     
     var newYorkQuery = NSURL(string: "http://terminal2.expedia.com:80/x/deals/packages?originTLA=SFO&destinationTLA=JFK&startDate=2016-02-28&endDate=2016-03-06&lengthOfStay=5&roomCount=1&adultCount=1&childCount=0&infantCount=0&limit=50&sortOrder=Desc&sortStrategy=SavingsPercentage&allowDuplicates=false")
     
@@ -30,21 +38,55 @@ class DealsTableView: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        session = NSURLSession.sharedSession()
         createCellHeightsArray()
         
-          self.tableView.backgroundColor = UIColor(patternImage: UIImage(named: "background")!)
+        self.navigationController?.navigationBar.barTintColor = UIColor.whiteColor()
+        self.tableView.backgroundColor = UIColor(patternImage: UIImage(named: "background")!)   
         
-        self.tabBarController!.tabBar.barTintColor = UIColor.blueColor()
-        self.tabBarController!.tabBar.tintColor = UIColor.whiteColor()
+        self.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Not in SF?", style: .Plain, target: self, action: "buttonPressed")
         
-        self.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Not in SF?", style: .Plain, target: "AddDatePicker", action: "performSegue:")
-    
+
+        self.view.addSubview(linearBar)
+        self.linearBar.startAnimation()
+        
+        self.taskForGet(newYorkQuery!) { (success, error) in
+            
+            if success{
+                print(self.priceFromApi)
+                
+                // Do some configuration with the data
+                
+                
+                // Grab best price + deep link
+            } else{
+                SweetAlert().showAlert("Ouch!", subTitle: "Something went wrong, please forgive us!", style: AlertStyle.Success)
+
+            }
+            
+        }
+//        self.taskForGet(lasVegasQuery)
+//        self.taskForGet(losAngelesQuery)
+        
+        
+        
     }
     
-    override func viewWillAppear(animated: Bool) {
-        navigationItem.title = "Deals"
+    func buttonPressed(){
+        navigationController?.presentVC(AddDataPicker())
+    }
 
+    
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        if tasksDidEnd == 0{
+            self.linearBar.alpha = 0.0
+            self.linearBar.stopAnimation()
+        } else{
+            self.linearBar.alpha = 0.0
+            self.linearBar.startAnimation()
+        }
     }
     
     
@@ -58,8 +100,6 @@ class DealsTableView: UITableViewController {
             cellHeights.append(kCloseCellHeight)
         }
     }
-    
-    
     
     // MARK: - Table view data source
     
@@ -98,7 +138,7 @@ class DealsTableView: UITableViewController {
     func taskForGet(query: NSURL, completionHandler: CompletionHandler){
         
         let toReq = NSURLRequest(URL: query)
-        let request = sharedSession.dataTaskWithRequest(toReq) { (data, response, error) in
+        let request = session.dataTaskWithRequest(toReq) { (data, response, error) in
             
             guard (error == nil) else {
                 return
@@ -107,11 +147,11 @@ class DealsTableView: UITableViewController {
             /* GUARD: Did we get a successful 2XX response? */
             guard let statusCode = (response as? NSHTTPURLResponse)?.statusCode where statusCode >= 200 && statusCode <= 299 else {
                 if let _ = response as? NSHTTPURLResponse {
-                    completionHandler(result: false, error: error)
+                    completionHandler(success: false, error: error)
                 } else if let _ = response {
-                    completionHandler(result: false, error: error)
+                    completionHandler(success: false, error: error)
                 } else {
-                    completionHandler(result: false, error: error)
+                    completionHandler(success: false, error: error)
                 }
                 return
             }
@@ -126,24 +166,29 @@ class DealsTableView: UITableViewController {
                 parsedResult = try NSJSONSerialization.JSONObjectWithData(data, options: .AllowFragments)
             } catch{
                 _ = [NSLocalizedDescriptionKey : "Could not parse the JSON: '\(data)'"]
-                completionHandler(result: false, error: error)
+                completionHandler(success: false, error: error)
             }
             
             
             if let results = parsedResult["deals"] as? [[String: AnyObject]]{
                 for result in results{
-                    for x in results{
-                     //   if x == "totalPackagePrice"{
-                     return
-                    
+                    for (key, value) in result{
+                      if key == "totalPackagePrice"{
+                            self.priceFromApi.append(value)
+                        }
+                        
+                        if key == "deeplink"{
+                            self.goToLink.append(value)
+                        }
                     }
                 }
             } else {
-                completionHandler(result: false, error: error)
+                completionHandler(success: false, error: error)
             }
     
         }
         request.resume()
+        self.tasksDidEnd--
     }
     
 
