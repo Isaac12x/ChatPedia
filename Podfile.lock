@@ -1,4 +1,5 @@
 PODS:
+  - Alamofire (3.2.1)
   - Eureka (1.4.1)
   - EZSwiftExtensions (1.2)
   - Firebase (2.5.1)
@@ -10,6 +11,7 @@ PODS:
   - LNRSimpleNotifications (0.3.0)
 
 DEPENDENCIES:
+  - Alamofire (~> 3.0)
   - Eureka (~> 1.3)
   - EZSwiftExtensions
   - Firebase (>= 2.5.0)
@@ -18,6 +20,7 @@ DEPENDENCIES:
   - LNRSimpleNotifications
 
 SPEC CHECKSUMS:
+  Alamofire: f11d8624a05f5d39e0c99309b3e600a3ba64298a
   Eureka: 2f1921d3162491921d2fef3b516bc4ef93a05122
   EZSwiftExtensions: bca85cfa0448c0c0213d97b02ddcf99d5f0ca1c9
   Firebase: 3565ea88b830f28f2c77ecc524622bc71a20d085
