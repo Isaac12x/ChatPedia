@@ -9,7 +9,7 @@
 
 import UIKit
 
-class ExploreCellImpl: ExploreCell {
+class ExploreCellImpl: ExploreTableViewCell {
     
     override func awakeFromNib() {
         

@@ -12,7 +12,7 @@ import EZSwiftExtensions
 import LNRSimpleNotifications
 import AudioToolbox
 
-class ExploreTableView : UITableViewController{
+class ExploreTableViewController : UITableViewController{
     
     let kCloseCellHeight: CGFloat = 179
     let kOpenCellHeight: CGFloat = 488

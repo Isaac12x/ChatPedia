@@ -8,7 +8,7 @@
 
 import UIKit
 
-public class ExploreCell: UITableViewCell {
+public class ExploreTableViewCell: UITableViewCell {
     
     public typealias CompletionHandler = () -> Void
     
