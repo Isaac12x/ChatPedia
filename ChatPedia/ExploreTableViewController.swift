@@ -32,8 +32,7 @@ class ExploreTableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-<<<<<<< HEAD:ChatPedia/ExploreTableViewController.swift
-=======
+
         
         //firebase login
         if CurrentUser.sharedInstance.authData == nil {
@@ -51,10 +50,7 @@ class ExploreTableViewController: UITableViewController {
         
              self.tableView.backgroundColor = UIColor(patternImage: UIImage(named: "background")!)
                 
-        createCellHeightsArray()
->>>>>>> de8e19f71ed8564be3036e58b0bd4e05e61211d1:ChatPedia/ExploreTableView.swift
 
-        
         // Get location
         manager = OneShotLocationManager()
         manager!.fetchWithCompletion { location, error in
@@ -80,7 +76,7 @@ class ExploreTableViewController: UITableViewController {
         notificationManager.notificationsPosition = LNRNotificationPosition.Top
         notificationManager.notificationsBodyTextColor = UIColor.darkGrayColor()
         
-        var alertSoundURL: NSURL? = NSBundle.mainBundle().URLForResource("click", withExtension: "wav")
+        let alertSoundURL: NSURL? = NSBundle.mainBundle().URLForResource("click", withExtension: "wav")
         if let _ = alertSoundURL {
             var mySound: SystemSoundID = 0
             AudioServicesCreateSystemSoundID(alertSoundURL!, &mySound)
