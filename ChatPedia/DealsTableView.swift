@@ -16,6 +16,8 @@ class DealsTableView: UIViewController {
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var toURL: UIView!
     @IBOutlet weak var updateView: UIView!
+    @IBOutlet weak var tpView: UIView!
+    @IBOutlet weak var noView: UILabel!
     
     var newYorkQuery = NSURL(string: "http://expedia.com/go/package/search/FlightHotel/2016-03-25/2016-03-30?FromAirport=SFO&Destination=JFK&NumRoom=1&NumAdult=1&NumChild=0&hotelId=789469")
     

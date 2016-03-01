@@ -10,6 +10,7 @@ target 'ChatPedia' do
   pod 'Eureka', '~> 1.3'
   pod 'EZSwiftExtensions'
   pod 'LNRSimpleNotifications'
+  pod 'Alamofire'
 end
 
 target 'ChatPediaTests' do
