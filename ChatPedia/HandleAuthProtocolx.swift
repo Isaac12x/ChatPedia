@@ -1,5 +1,5 @@
 //
-//  GlobalEnums.swift
+//  HandleAuthProtocol.swift
 //  ChatPedia
 //
 //  Created by Douglas Hewitt on 2/26/16.
@@ -8,7 +8,6 @@
 
 import Foundation
 
-enum StoryboardID: String {
-    case Login = "Login"
-    case Utilities = "Utilities"
+protocol HandleAuthProtocol {
+    func presentLoginController()
 }

@@ -13,8 +13,10 @@ class TableViewBase: UITableViewController {
     let kCloseCellHeight: CGFloat = 179
     let kOpenCellHeight: CGFloat = 488
 
-    let kRowsCount = 10
+    let kRowsCount = 0
     
+
+       
     var cellHeights = [CGFloat]()
 
     override func viewDidLoad() {
@@ -74,7 +76,7 @@ class TableViewBase: UITableViewController {
     // MARK: - Table view data source
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 10
+        return 0
     }
 
     override func tableView(tableView: UITableView, willDisplayCell cell: UITableViewCell, forRowAtIndexPath indexPath: NSIndexPath) {

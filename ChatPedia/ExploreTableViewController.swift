@@ -67,6 +67,19 @@ class ExploreTableViewController: UITableViewController {
         self.notificationOnDeal()
         
         tableView.reloadData()
+        
+        
+        ez.runThisAfterDelay(seconds: 10) { () -> () in
+            SweetAlert().showAlert("Ready to start?", subTitle: "Do you mind if we track you once a day to know if you are travelling?", style: AlertStyle.Warning, buttonTitle:"No way", buttonColor:UIColor.colorFromRGB(0xD0D0D0) , otherButtonTitle:  "Of course!", otherButtonColor: UIColor.colorFromRGB(0xDD6B55)) { (isOtherButton) -> Void in
+                if isOtherButton == true {
+                    
+                    SweetAlert().showAlert("Warning", subTitle: "You will lose functionallity", style: AlertStyle.Warning)
+                }
+                else {
+                    SweetAlert().showAlert("Great!", subTitle: "We can search offers for you!", style: AlertStyle.Success)
+                }
+            }
+        }
 
     }
     

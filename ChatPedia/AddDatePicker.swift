@@ -12,6 +12,9 @@ import EZSwiftExtensions
 
 class AddDataPicker : FormViewController{
     
+    var data : [String: Any?]!
+
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -19,9 +22,9 @@ class AddDataPicker : FormViewController{
             NSFontAttributeName: UIFont(name: "LemonMilk", size: 20)!,
             NSForegroundColorAttributeName: UIColor.whiteColor()
         ]
-        navigationController?.navigationItem.leftBarButtonItem = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.Cancel, target: self, action: "dismissViewController")
+        
         navigationController?.navigationItem.title = "ChatPedia"
-        navigationController?.navigationItem.leftBarButtonItem = UIBarButtonItem(barButtonSystemItem: .Cancel, target: self, action: "cancelViewController")
+        navigationController?.navigationItem.leftBarButtonItem = UIBarButtonItem(barButtonSystemItem: .Cancel, target: self, action: "cancelViewController:")
         
         form.inlineRowHideOptions = InlineRowHideOptions.AnotherInlineRowIsShown.union(.FirstResponderChanges)
         

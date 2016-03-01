@@ -9,6 +9,7 @@
 import UIKit
 import Firebase
 import JSQMessagesViewController
+import EZSwiftExtensions
 
 class ChatViewController: JSQMessagesViewController {
     

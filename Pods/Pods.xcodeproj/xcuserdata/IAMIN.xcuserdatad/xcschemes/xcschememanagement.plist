@@ -4,6 +4,11 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
+		<key>Alamofire.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>EZSwiftExtensions.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -47,12 +52,17 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>31AC335AF4FC258A90A19DCCF529C889</key>
+		<key>2A1355200AF45B9909AA7F55D054BEB2</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
 		<key>40F580A48FF2C38CCBC58A6B3C8F5505</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>79C040AFDDCE1BCBF6D8B5EB0B85887F</key>
 		<dict>
 			<key>primary</key>
 			<true/>

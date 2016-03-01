@@ -73,11 +73,11 @@ class ExploreDetailTableViewController: UITableViewController {
         //thingsToPass.thumbnail = currentCell?.thumbnailImage.text
         //thingsToPass.topImageToPass = currentCell?.picbackground.text
         
-        if let vc = UIStoryboard(name: StoryboardID.Main.rawValue, bundle: nil).instantiateViewControllerWithIdentifier("DetailTripVC") as? DetailTripVC {
-            vc.stuff = thingsToPass
-            vc.roomRef = currentCell?.roomRef
-            self.showViewController(vc, sender: nil)
-        }
+//        if let vc = UIStoryboard(name: StoryboardID.Main.rawValue, bundle: nil).instantiateViewControllerWithIdentifier("DetailTripVC") as? DetailTripVC {
+//            vc.stuff = thingsToPass
+//            vc.roomRef = currentCell?.roomRef
+//            self.showViewController(vc, sender: nil)
+        //}
         
     }
     
