@@ -11,5 +11,6 @@ travel more than some amount of miles it actually knows you are travelling and p
 imported from expedia.
 
 
-iOS app: works for iphone and for ipad.
-Writen on 26-28/02/2016
+This iOS app works for iphone and for ipad.
+
+Writen between the 26th and 28th of February 2016.
